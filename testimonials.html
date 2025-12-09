@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Customer Testimonials | SEMO Total Home Solutions</title>
+  <meta name="description" content="Read what homeowners, landlords, and investors across Southeast Missouri say about working with SEMO Total Home Solutions.">
+
+  <link rel="icon" type="image/png" href="assets/img/logo-horizontal.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root { --max-width: 900px; --accent:#f97316; }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    html { scroll-behavior:smooth; }
+    body {
+      font-family:"Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, sans-serif;
+      color:#e5e7eb;
+      background:#020617;
+      line-height:1.7;
+    }
+    .page-wrapper {
+      min-height:100vh;
+      background:
+        radial-gradient(circle at top left, rgba(249,115,22,0.2), transparent 55%),
+        radial-gradient(circle at bottom right, rgba(37,99,235,0.3), transparent 60%);
+      padding:20px 16px 40px;
+    }
+    header {
+      max-width:var(--max-width);
+      margin:0 auto 18px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:14px;
+    }
+    .brand {
+      display:flex; align-items:center; gap:10px;
+    }
+    .brand-logo {
+      width:46px; height:46px; border-radius:999px;
+      overflow:hidden; background:#020617;
+      display:flex; align-items:center; justify-content:center;
+      box-shadow:0 10px 28px rgba(15,23,42,0.7);
+      border:1px solid rgba(148,163,184,0.4);
+    }
+    .brand-logo img { width:100%; height:100%; object-fit:cover; }
+    .brand-text h1 {
+      font-family:"Poppins", system-ui, -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, sans-serif;
+      font-size:1rem; letter-spacing:0.08em;
+      text-transform:uppercase; color:#f9fafb;
+    }
+    .brand-text span {
+      display:block; font-size:0.72rem; color:#9ca3af;
+      text-transform:uppercase; letter-spacing:0.18em;
+      margin-top:2px;
+    }
+    nav a {
+      font-size:0.8rem;
+      color:#cbd5f5;
+      text-decoration:none;
+      text-transform:uppercase;
+      letter-spacing:0.14em;
+      margin-left:14px;
+      position:relative;
+      padding-bottom:2px;
+    }
+    nav a::after {
+      content:"";
+      position:absolute;
+      left:0;
+      bottom:0;
+      width:0;
+      height:2px;
+      background:linear-gradient(90deg, var(--accent), #facc15);
+      transition:width 0.18s ease-out;
+    }
+    nav a:hover::after { width:100%; }
+
+    main {
+      max-width:var(--max-width);
+      margin:0 auto;
+      background:rgba(15,23,42,0.97);
+      border-radius:24px;
+      padding:20px 18px 24px;
+      border:1px solid rgba(148,163,184,0.25);
+      box-shadow:0 16px 40px rgba(15,23,42,0.65);
+    }
+    h2 {
+      font-family:"Poppins", system-ui, sans-serif;
+      font-size:1.2rem;
+      text-transform:uppercase;
+      letter-spacing:0.18em;
+      margin-bottom:6px;
+      color:#f9fafb;
+    }
+    .subtitle {
+      font-size:0.9rem;
+      color:#cbd5f5;
+      margin-bottom:14px;
+    }
+    .testimonials {
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:14px;
+    }
+    .t-card {
+      background:#020617;
+      border-radius:16px;
+      padding:14px 12px 12px;
+      border:1px solid rgba(31,41,55,0.95);
+    }
+    .t-quote {
+      font-size:0.85rem;
+      color:#e5e7eb;
+      margin-bottom:8px;
+    }
+    .t-name {
+      font-size:0.8rem;
+      color:#fbbf24;
+      font-weight:600;
+    }
+    .t-meta {
+      font-size:0.76rem;
+      color:#9ca3af;
+    }
+    .hint {
+      font-size:0.78rem;
+      color:#9ca3af;
+      margin-top:12px;
+    }
+    .hint a { color:#93c5fd; text-decoration:none; }
+    .hint a:hover { text-decoration:underline; }
+    footer {
+      max-width:var(--max-width);
+      margin:10px auto 0;
+      padding-top:10px;
+      font-size:0.78rem;
+      color:#9ca3af;
+      display:flex;
+      justify-content:space-between;
+      border-top:1px solid rgba(31,41,55,0.9);
+    }
+    footer a { color:#cbd5f5; text-decoration:none; }
+    footer a:hover { text-decoration:underline; }
+    @media (max-width:720px){
+      header { flex-direction:column; align-items:flex-start; }
+      nav { margin-top:4px; }
+      nav a { margin-left:0; margin-right:12px; }
+      .testimonials { grid-template-columns:minmax(0,1fr); }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrapper">
+    <header>
+      <div class="brand">
+        <div class="brand-logo">
+          <img src="assets/img/logo-horizontal.png" alt="SEMO Total Home Solutions logo" />
+        </div>
+        <div class="brand-text">
+          <h1>SEMO Total Home Solutions</h1>
+          <span>Customer Testimonials</span>
+        </div>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="landlords.html">Landlords &amp; Investors</a>
+        <a href="tel:15732820119">Call 573-282-0119</a>
+      </nav>
+    </header>
+
+    <main>
+      <h2>What Our Customers Say</h2>
+      <p class="subtitle">
+        Real feedback from homeowners, landlords, and investors we’ve helped
+        across Southeast Missouri. Honest work, clear communication, and jobs
+        finished the right way.
+      </p>
+
+      <div class="testimonials">
+        <div class="t-card">
+          <p class="t-quote">
+            “They showed up when they said they would, explained everything in
+            plain language, and the finished work looks amazing. We’ll be using
+            them again for our next project.”
+          </p>
+          <div class="t-name">– [Customer Name], [City, State]</div>
+          <div class="t-meta">Interior remodel</div>
+        </div>
+
+        <div class="t-card">
+          <p class="t-quote">
+            “As a landlord, I just need things handled without drama. SEMO
+            Total Home Solutions knocked out our turn list quickly and sent
+            photo updates along the way.”
+          </p>
+          <div class="t-name">– [Customer Name], [City, State]</div>
+          <div class="t-meta">Rent-ready turn & repairs</div>
+        </div>
+
+        <div class="t-card">
+          <p class="t-quote">
+            “The deck rebuild made our whole backyard usable again. Solid work,
+            fair price, and they cleaned up better than most contractors I’ve
+            dealt with.”
+          </p>
+          <div class="t-name">– [Customer Name], [City, State]</div>
+          <div class="t-meta">Deck rebuild</div>
+        </div>
+
+        <div class="t-card">
+          <p class="t-quote">
+            “Communication was great from start to finish. I knew exactly what
+            to expect, and the job was done on the timeline they promised.”
+          </p>
+          <div class="t-name">– [Customer Name], [City, State]</div>
+          <div class="t-meta">Repairs & maintenance</div>
+        </div>
+      </div>
+
+      <p class="hint">
+        As we complete more projects under the SEMO Total Home Solutions name,
+        we’ll update this page with real reviews and photos. Once your
+        <strong>Google Business Profile</strong> is live, you can also link it here so people
+        can read the latest reviews.
+        <br><br>
+        Tip: when you get a great Google review, copy a short quote and paste it
+        into one of these cards, then swap in the real name and city.
+      </p>
+    </main>
+
+    <footer>
+      <div>© <span id="year"></span> SEMO Total Home Solutions</div>
+      <div><a href="index.html">Back to Home</a></div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
