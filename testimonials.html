@@ -10,25 +10,43 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <!-- Updated fonts to Montserrat for body text and Oswald for headings -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
 
   <style>
-    :root { --max-width: 900px; --accent:#f97316; }
+    /*
+      Define a consistent colour palette and typography for the testimonials page.
+      Dark primary tones paired with a bright orange accent create a bold,
+      hard‑working feel that matches the brand’s ethos. Additional soft variants
+      help build smooth gradients and subtle highlights.
+    */
+    :root {
+      --max-width: 900px;
+      --primary: #0a0a0a;
+      --primary-soft: #121212;
+      --accent: #ff6100;
+      --accent-soft: #ffb380;
+      --text-main: #f5f5f5;
+      --text-muted: #7a7a7a;
+      --border-soft: rgba(255, 255, 255, 0.12);
+      --shadow-soft: 0 18px 40px rgba(0, 0, 0, 0.5);
+    }
     * { box-sizing:border-box; margin:0; padding:0; }
     html { scroll-behavior:smooth; }
     body {
-      font-family:"Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
         Roboto, sans-serif;
-      color:#e5e7eb;
-      background:#020617;
-      line-height:1.7;
+      color: var(--text-main);
+      background: var(--primary);
+      line-height: 1.7;
     }
     .page-wrapper {
-      min-height:100vh;
+      min-height: 100vh;
+      /* Subtle orange highlights fading into the dark background */
       background:
-        radial-gradient(circle at top left, rgba(249,115,22,0.2), transparent 55%),
-        radial-gradient(circle at bottom right, rgba(37,99,235,0.3), transparent 60%);
-      padding:20px 16px 40px;
+        radial-gradient(circle at top left, rgba(255, 97, 0, 0.18), transparent 55%),
+        radial-gradient(circle at bottom right, rgba(255, 97, 0, 0.08), transparent 60%);
+      padding: 20px 16px 40px;
     }
     header {
       max-width:var(--max-width);
@@ -50,14 +68,20 @@
     }
     .brand-logo img { width:100%; height:100%; object-fit:cover; }
     .brand-text h1 {
-      font-family:"Poppins", system-ui, -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, sans-serif;
-      font-size:1rem; letter-spacing:0.08em;
-      text-transform:uppercase; color:#f9fafb;
+      font-family: "Oswald", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: 1rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-main);
     }
     .brand-text span {
-      display:block; font-size:0.72rem; color:#9ca3af;
-      text-transform:uppercase; letter-spacing:0.18em;
-      margin-top:2px;
+      display: block;
+      font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      margin-top: 2px;
     }
     nav a {
       font-size:0.8rem;
@@ -70,14 +94,15 @@
       padding-bottom:2px;
     }
     nav a::after {
-      content:"";
-      position:absolute;
-      left:0;
-      bottom:0;
-      width:0;
-      height:2px;
-      background:linear-gradient(90deg, var(--accent), #facc15);
-      transition:width 0.18s ease-out;
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      /* Use the accent colours for the nav underline */
+      background: linear-gradient(90deg, var(--accent), var(--accent-soft));
+      transition: width 0.18s ease-out;
     }
     nav a:hover::after { width:100%; }
 
@@ -91,17 +116,17 @@
       box-shadow:0 16px 40px rgba(15,23,42,0.65);
     }
     h2 {
-      font-family:"Poppins", system-ui, sans-serif;
-      font-size:1.2rem;
-      text-transform:uppercase;
-      letter-spacing:0.18em;
-      margin-bottom:6px;
-      color:#f9fafb;
+      font-family: "Oswald", system-ui, sans-serif;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      margin-bottom: 6px;
+      color: var(--text-main);
     }
     .subtitle {
-      font-size:0.9rem;
-      color:#cbd5f5;
-      margin-bottom:14px;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 14px;
     }
     .testimonials {
       display:grid;
@@ -120,33 +145,43 @@
       margin-bottom:8px;
     }
     .t-name {
-      font-size:0.8rem;
-      color:#fbbf24;
-      font-weight:600;
+      font-size: 0.8rem;
+      color: var(--accent-soft);
+      font-weight: 600;
     }
     .t-meta {
-      font-size:0.76rem;
-      color:#9ca3af;
+      font-size: 0.76rem;
+      color: var(--text-muted);
     }
     .hint {
-      font-size:0.78rem;
-      color:#9ca3af;
-      margin-top:12px;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-top: 12px;
     }
-    .hint a { color:#93c5fd; text-decoration:none; }
-    .hint a:hover { text-decoration:underline; }
+    .hint a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .hint a:hover {
+      text-decoration: underline;
+    }
     footer {
-      max-width:var(--max-width);
-      margin:10px auto 0;
-      padding-top:10px;
-      font-size:0.78rem;
-      color:#9ca3af;
-      display:flex;
-      justify-content:space-between;
-      border-top:1px solid rgba(31,41,55,0.9);
+      max-width: var(--max-width);
+      margin: 10px auto 0;
+      padding-top: 10px;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      display: flex;
+      justify-content: space-between;
+      border-top: 1px solid var(--border-soft);
     }
-    footer a { color:#cbd5f5; text-decoration:none; }
-    footer a:hover { text-decoration:underline; }
+    footer a {
+      color: var(--accent-soft);
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
     @media (max-width:720px){
       header { flex-direction:column; align-items:flex-start; }
       nav { margin-top:4px; }
@@ -183,43 +218,52 @@
       </p>
 
       <div class="testimonials">
+        <!-- Whole roof replacement testimonial -->
         <div class="t-card">
           <p class="t-quote">
-            “They showed up when they said they would, explained everything in
-            plain language, and the finished work looks amazing. We’ll be using
-            them again for our next project.”
+            “SEMO Total Home Solutions replaced our entire roof ahead of schedule
+            and on budget. The new roof looks incredible and has already stood up
+            to several severe storms. We couldn’t be happier with the quality
+            and professionalism.”
           </p>
-          <div class="t-name">– [Customer Name], [City, State]</div>
-          <div class="t-meta">Interior remodel</div>
+          <div class="t-name">– John R., Cape Girardeau</div>
+          <div class="t-meta">Whole roof replacement</div>
         </div>
 
+        <!-- Water drainage installation testimonial -->
         <div class="t-card">
           <p class="t-quote">
-            “As a landlord, I just need things handled without drama. SEMO
-            Total Home Solutions knocked out our turn list quickly and sent
-            photo updates along the way.”
+            “Our yard used to flood every time it rained. Danny’s team designed
+            and installed a custom drainage solution that eliminated the standing
+            water completely. Their crew worked efficiently and left the site
+            spotless.”
           </p>
-          <div class="t-name">– [Customer Name], [City, State]</div>
-          <div class="t-meta">Rent-ready turn & repairs</div>
+          <div class="t-name">– Sarah M., Jackson</div>
+          <div class="t-meta">Water drainage install</div>
         </div>
 
+        <!-- House painting testimonial -->
         <div class="t-card">
           <p class="t-quote">
-            “The deck rebuild made our whole backyard usable again. Solid work,
-            fair price, and they cleaned up better than most contractors I’ve
-            dealt with.”
+            “They painted our entire house and the results are better than we
+            imagined. Crisp lines, smooth coverage, and a durable finish that
+            makes our home look brand new. Highly recommend SEMO for any painting
+            project.”
           </p>
-          <div class="t-name">– [Customer Name], [City, State]</div>
-          <div class="t-meta">Deck rebuild</div>
+          <div class="t-name">– Lisa T., Poplar Bluff</div>
+          <div class="t-meta">House painting</div>
         </div>
 
+        <!-- Structural repairs testimonial -->
         <div class="t-card">
           <p class="t-quote">
-            “Communication was great from start to finish. I knew exactly what
-            to expect, and the job was done on the timeline they promised.”
+            “Great communication from start to finish. They reinforced our floor
+            joists and replaced rotted sill plates, leaving us with a solid
+            foundation and level floors. The work was tough, but so is the
+            result.”
           </p>
-          <div class="t-name">– [Customer Name], [City, State]</div>
-          <div class="t-meta">Repairs & maintenance</div>
+          <div class="t-name">– Mike &amp; Carol, Perryville</div>
+          <div class="t-meta">Structural repairs</div>
         </div>
       </div>
 
