@@ -24,8 +24,9 @@
       --max-width: 900px;
       --primary: #0a0a0a;
       --primary-soft: #121212;
-      --accent: #ff6100;
-      --accent-soft: #ffb380;
+      /* Use vibrant construction yellow and its lighter variant for accents */
+      --accent: #fbbf24;
+      --accent-soft: #fde68a;
       --text-main: #f5f5f5;
       --text-muted: #7a7a7a;
       --border-soft: rgba(255, 255, 255, 0.12);
@@ -44,8 +45,10 @@
       min-height: 100vh;
       /* Subtle orange highlights fading into the dark background */
       background:
-        radial-gradient(circle at top left, rgba(255, 97, 0, 0.18), transparent 55%),
-        radial-gradient(circle at bottom right, rgba(255, 97, 0, 0.08), transparent 60%);
+        /* Lighter construction yellow highlights instead of orange */
+        /* Updated gradient to a brighter yellow to avoid brownish tint */
+        radial-gradient(circle at top left, rgba(253, 216, 88, 0.25), transparent 55%),
+        radial-gradient(circle at bottom right, rgba(253, 216, 88, 0.15), transparent 60%);
       padding: 20px 16px 40px;
     }
     header {
@@ -267,15 +270,7 @@
         </div>
       </div>
 
-      <p class="hint">
-        As we complete more projects under the SEMO Total Home Solutions name,
-        we’ll update this page with real reviews and photos. Once your
-        <strong>Google Business Profile</strong> is live, you can also link it here so people
-        can read the latest reviews.
-        <br><br>
-        Tip: when you get a great Google review, copy a short quote and paste it
-        into one of these cards, then swap in the real name and city.
-      </p>
+      <!-- hint section removed -->
     </main>
 
     <footer>

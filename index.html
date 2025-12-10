@@ -32,10 +32,11 @@
       /* Updated color palette for a bold black and orange theme */
       --primary: #0a0a0a;         /* near-black background */
       --primary-soft: #131313;     /* dark grey for subtle contrast */
-      --accent: #ff6100;           /* bright orange accent */
-      --accent-soft: #ffb380;      /* soft orange highlight */
-      --text-main: #f5f5f5;        /* light grey for primary text */
-      --text-muted: #7a7a7a;       /* muted grey for secondary text */
+      /* Updated accent colors to orangish yellow and black construction palette */
+      --accent: #fbbf24;           /* orangish yellow accent (construction) */
+      --accent-soft: #fde68a;      /* lighter yellow for highlights */
+      --text-main: #f3f4f6;        /* slightly lighter primary text */
+      --text-muted: #9ca3af;       /* muted grey for secondary text */
       --border-soft: rgba(255, 255, 255, 0.12); /* subtle light border */
       --max-width: 1120px;
       --radius-lg: 24px;
@@ -68,9 +69,11 @@
 
     .page-wrapper {
       min-height: 100vh;
-      /* Fade from subtle orange highlights to transparent on a dark background */
-      background: radial-gradient(circle at top left, rgba(255, 97, 0, 0.18), transparent 55%),
-        radial-gradient(circle at 70% 100%, rgba(255, 97, 0, 0.08), transparent 60%);
+      /* Fade from bright yellow highlights to transparent on a dark background */
+      /* Lighten the top fade even more with a vibrant construction yellow */
+      /* Updated gradient with a lighter construction yellow to eliminate brown tones */
+      background: radial-gradient(circle at top left, rgba(253, 216, 88, 0.25), transparent 55%),
+        radial-gradient(circle at 70% 100%, rgba(253, 216, 88, 0.15), transparent 60%);
       padding: 0 16px 40px;
     }
 
@@ -906,74 +909,74 @@
       <section id="projects">
         <h2>Recent Projects</h2>
         <p class="section-subtitle">
-          A few before-and-after examples from homes we’ve repaired and remodeled across Southeast Missouri. More photos available on request.
+          Here are three examples of our core services — each project shows the difference we can make from start to finish.
         </p>
 
         <div class="grid">
-          <!-- PROJECT 1 -->
+          <!-- WHOLE ROOF REPLACEMENT -->
           <div class="card">
-            <span class="badge">Kitchen Remodel</span>
-            <h3>Cape Girardeau, MO</h3>
+            <span class="badge">Whole Roof Replacement</span>
+            <h3>Bollinger County, MO</h3>
             <p style="font-size:0.84rem;color:#d1d5db;margin-bottom:6px;">
-              Dated kitchen transformed with new cabinets, countertops, flooring, and lighting.
+              Complete tear‑off and installation of a new roof to protect this home and improve its curb appeal.
             </p>
             <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;">
               <figure>
                 <img
-                  src="assets/img/projects/kitchen-remodel-cape-2025-before-01.jpg"
-                  alt="Old kitchen in Cape Girardeau before remodel with worn cabinets and flooring" />
+                  src="assets/img/projects/roof-replacement-before-02.jpg"
+                  alt="Home with severely damaged roof before replacement showing missing shingles and structural damage" />
                 <figcaption class="before">Before</figcaption>
               </figure>
               <figure>
                 <img
-                  src="assets/img/projects/kitchen-remodel-cape-2025-after-01.jpg"
-                  alt="Finished kitchen remodel in Cape Girardeau with new cabinets and flooring" />
+                  src="assets/img/projects/roof-replacement-after-02.jpg"
+                  alt="Home after complete roof replacement with new shingles and improved fascia" />
                 <figcaption class="after">After</figcaption>
               </figure>
             </div>
           </div>
 
-          <!-- PROJECT 2 -->
+          <!-- WATER DRAINAGE INSTALL -->
           <div class="card">
-            <span class="badge">Bathroom Upgrade</span>
-            <h3>Dexter, MO</h3>
+            <span class="badge">Water Drainage Install</span>
+            <h3>Bollinger County, MO</h3>
             <p style="font-size:0.84rem;color:#d1d5db;margin-bottom:6px;">
-              Water-damaged bath repaired and updated with fresh tile, fixtures, and paint.
+              Installed proper gutters and downspouts to channel water away from the foundation and prevent future damage.
             </p>
             <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;">
               <figure>
                 <img
-                  src="assets/img/projects/bath-dexter-2025-before-01.jpg"
-                  alt="Bathroom in Dexter before repairs with old tile and fixtures" />
+                  src="assets/img/projects/water-drainage-before-01.jpg"
+                  alt="Property before water drainage installation with overgrown branches and poor runoff" />
                 <figcaption class="before">Before</figcaption>
               </figure>
               <figure>
                 <img
-                  src="assets/img/projects/bath-dexter-2025-after-01.jpg"
-                  alt="Updated bathroom in Dexter with new tile and fixtures" />
+                  src="assets/img/projects/water-drainage-after-01.jpg"
+                  alt="Property after water drainage install showing cleared roofline and improved drainage" />
                 <figcaption class="after">After</figcaption>
               </figure>
             </div>
           </div>
 
-          <!-- PROJECT 3 -->
+          <!-- HOUSE PAINTING -->
           <div class="card">
-            <span class="badge">Deck Rebuild</span>
-            <h3>Jackson, MO</h3>
+            <span class="badge">House Painting</span>
+            <h3>Bollinger County, MO</h3>
             <p style="font-size:0.84rem;color:#d1d5db;margin-bottom:6px;">
-              Unsafe deck torn down and rebuilt with new framing, boards, and railings.
+              Prepped and painted this home’s exterior to restore its charm and protect it for years to come.
             </p>
             <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;">
               <figure>
                 <img
-                  src="assets/img/projects/deck-jackson-2024-before-01.jpg"
-                  alt="Old weathered deck in Jackson before rebuild" />
+                  src="assets/img/projects/house-painting-before-02.jpg"
+                  alt="House exterior before painting with peeling paint and worn surfaces" />
                 <figcaption class="before">Before</figcaption>
               </figure>
               <figure>
                 <img
-                  src="assets/img/projects/deck-jackson-2024-after-01.jpg"
-                  alt="Newly rebuilt deck in Jackson with new boards and railings" />
+                  src="assets/img/projects/house-painting-after-02.jpg"
+                  alt="House exterior after painting showing fresh trim and revitalized siding" />
                 <figcaption class="after">After</figcaption>
               </figure>
             </div>

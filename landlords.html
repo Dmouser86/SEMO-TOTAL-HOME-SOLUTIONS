@@ -17,8 +17,9 @@
       --max-width: 900px;
       --primary: #0a0a0a;
       --primary-soft: #1a1a1a;
-      --accent: #ff6100;
-      --accent-soft: #ffb380;
+      /* Use bright orangish yellow and softer yellow for construction theme accents */
+      --accent: #fbbf24;
+      --accent-soft: #fde68a;
       --text-main: #f5f5f5;
       --text-muted: #7a7a7a;
       --border-soft: rgba(255, 255, 255, 0.12);
@@ -36,9 +37,11 @@
     }
     .page-wrapper {
       min-height: 100vh;
+      /* Use vibrant construction yellow for subtle background highlights */
       background:
-        radial-gradient(circle at top left, rgba(255, 97, 0, 0.18), transparent 55%),
-        radial-gradient(circle at bottom right, rgba(255, 97, 0, 0.08), transparent 60%);
+        /* Updated gradient to a brighter yellow to avoid brownish tint */
+        radial-gradient(circle at top left, rgba(253, 216, 88, 0.25), transparent 55%),
+        radial-gradient(circle at bottom right, rgba(253, 216, 88, 0.15), transparent 60%);
       padding: 20px 16px 40px;
     }
     header {
@@ -167,8 +170,9 @@
       margin-top: 14px;
       padding: 10px 11px;
       border-radius: 12px;
-      background: rgba(255, 97, 0, 0.15);
-      border: 1px solid rgba(255, 97, 0, 0.55);
+      /* Use softer golden yellow for highlighted info box */
+      background: rgba(251, 191, 36, 0.15);
+      border: 1px solid rgba(251, 191, 36, 0.55);
       font-size: 0.82rem;
       color: var(--text-main);
     }
@@ -192,12 +196,12 @@
       align-items: center;
       gap: 6px;
       cursor: pointer;
-      box-shadow: 0 16px 34px rgba(255, 97, 0, 0.45);
+      box-shadow: 0 16px 34px rgba(251, 191, 36, 0.45);
     }
     .btn-outline {
       padding: 9px 14px;
       border-radius: 999px;
-      border: 1px solid rgba(255, 97, 0, 0.8);
+      border: 1px solid rgba(251, 191, 36, 0.8);
       background: transparent;
       color: var(--text-main);
       font-size: 0.86rem;
