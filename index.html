@@ -1,506 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Basic Meta -->
+  <!-- Basic Meta Tags -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SEMO Total Home Solutions | Home Repair & Remodeling in Southeast Missouri</title>
-  <meta name="description" content="SEMO Total Home Solutions provides professional home repair, handyman services, remodeling, and maintenance plans across Southeast Missouri and surrounding areas. Call or text 573-282-0119 for a free estimate." />
+  <meta name="description" content="SEMO Total Home Solutions provides professional home repair, handyman services, remodeling, and maintenance plans across Southeast Missouri and surrounding areas. Call or text 573-238-8732 for a free estimate." />
+
+  <!-- Favicon -->
   <link rel="icon" type="image/png" href="assets/img/logo-horizontal.png" />
+
+  <!-- Fonts (Montserrat for body, Oswald for headings) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap"
-    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Open Graph / Social Meta -->
   <meta property="og:title" content="SEMO Total Home Solutions | Home Repair & Remodeling in Southeast Missouri" />
-  <meta
-    property="og:description"
-    content="Owner-operated home repair, remodeling, and maintenance services across Southeast Missouri. One call for total home solutions." />
+  <meta property="og:description" content="Owner-operated home repair, remodeling, and maintenance services across Southeast Missouri. One call for total home solutions." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://semototalhomesolutions.com/" />
-  <meta property="og:image" content="https://semototalhomesolutions.com/assets/img/logo-horizontal.png" />
-  <style>
-    :root {
-      --primary: #0a0a0a;
-      --primary-soft: #131313;
-      --accent: #fbbf24;
-      --accent-soft: #fde68a;
-      --text-main: #f3f4f6;
-      --text-muted: #9ca3af;
-      --border-soft: rgba(255, 255, 255, 0.12);
-      --max-width: 1120px;
-      --radius-lg: 24px;
-      --radius-md: 16px;
-      --shadow-soft: 0 18px 40px rgba(0, 0, 0, 0.5);
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      color: var(--text-main);
-      background: var(--primary);
-      line-height: 1.7;
-    }
-    img { max-width: 100%; display: block; }
-    .page-wrapper {
-      min-height: 100vh;
-      background:
-        radial-gradient(circle at top left, rgba(253, 216, 88, 0.25), transparent 55%),
-        radial-gradient(circle at 70% 100%, rgba(253, 216, 88, 0.15), transparent 60%);
-      padding: 0 16px 40px;
-    }
-    header {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 18px 0 8px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 18px;
-    }
-    .brand { display: flex; align-items: center; gap: 12px; }
-    .brand-logo {
-      width: 54px; height: 54px; border-radius: 999px;
-      overflow: hidden; background: #020617;
-      display: flex; align-items: center; justify-content: center;
-      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.7);
-      border: 1px solid rgba(148, 163, 184, 0.4);
-    }
-    .brand-logo img { width: 100%; height: 100%; object-fit: cover; }
-    .brand-text h1 {
-      font-family: 'Oswald', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      font-size: 1.3rem;
-      letter-spacing: 0.05em;
-      color: var(--text-main);
-      text-transform: uppercase;
-    }
-    .brand-text span {
-      display: block;
-      font-size: 0.72rem;
-      color: var(--text-muted);
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      margin-top: 2px;
-      font-family: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    }
-    .nav-and-cta {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      gap: 8px;
-    }
-    nav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      font-size: 0.82rem;
-    }
-    nav a {
-      color: #cbd5f5;
-      text-decoration: none;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      position: relative;
-      padding-bottom: 2px;
-    }
-    nav a::after {
-      content: '';
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 0;
-      height: 2px;
-      background: linear-gradient(90deg, var(--accent), var(--accent-soft));
-      transition: width 0.18s ease-out;
-    }
-    nav a:hover::after { width: 100%; }
-    .header-cta {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: flex-end;
-      gap: 10px;
-      font-size: 0.85rem;
-    }
-    .header-cta .phone-label {
-      color: #cbd5f5;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      font-size: 0.7rem;
-    }
-    .header-cta .phone-number {
-      color: #f9fafb;
-      font-weight: 600;
-      font-size: 0.92rem;
-    }
-    .call-btn {
-      padding: 8px 14px;
-      border-radius: 999px;
-      background: linear-gradient(135deg, var(--accent), var(--accent-soft));
-      color: var(--primary);
-      font-weight: 600;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      box-shadow: 0 14px 30px rgba(255, 184, 0, 0.35);
-      border: none;
-      cursor: pointer;
-      font-size: 0.88rem;
-    }
-    .call-btn span.icon { font-size: 1.1rem; }
-    main {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: minmax(0, 2fr);
-      gap: 28px;
-    }
-    .hero {
-      margin-top: 16px;
-      background: radial-gradient(circle at top left, rgba(15, 23, 42, 0.78), #020617);
-      border-radius: 30px;
-      padding: 26px 22px 24px;
-      box-shadow: var(--shadow-soft);
-      border: 1px solid var(--border-soft);
-      display: grid;
-      grid-template-columns: minmax(0, 3fr) minmax(0, 2.2fr);
-      gap: 22px;
-      align-items: center;
-    }
-    .hero-text h2 {
-      font-family: 'Oswald', system-ui, sans-serif;
-      font-size: 2.15rem;
-      color: #f9fafb;
-      letter-spacing: 0.02em;
-      margin-bottom: 10px;
-    }
-    .hero-text h2 span { color: var(--accent); }
-    .hero-sub {
-      font-size: 0.98rem;
-      color: #cbd5f5;
-      max-width: 34rem;
-      margin-bottom: 14px;
-    }
-    .hero-sub strong {
-      color: #e5e7eb;
-      font-weight: 600;
-    }
-    .tag-pill {
-      font-size: 0.78rem;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      padding: 6px 10px;
-      border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.55);
-      color: #e5e7eb;
-      background: rgba(15, 23, 42, 0.8);
-      display:inline-block;
-      margin:2px 4px 4px 0;
-    }
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      align-items: center;
-    }
-    .btn-primary,
-    .btn-outline {
-      padding: 10px 16px;
-      border-radius: 999px;
-      font-size: 0.92rem;
-      font-weight: 600;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      cursor: pointer;
-      border: none;
-    }
-    .btn-primary {
-      background: linear-gradient(135deg, var(--accent), #facc15);
-      color: #111827;
-      box-shadow: 0 18px 40px rgba(248, 181, 64, 0.4);
-    }
-    .btn-outline {
-      background: transparent;
-      border: 1px solid rgba(148, 163, 184, 0.7);
-      color: #e5e7eb;
-    }
-    .hero-meta {
-      margin-top: 12px;
-      font-size: 0.82rem;
-      color: #9ca3af;
-    }
-    .hero-meta strong {
-      color: #e5e7eb;
-      font-weight: 600;
-    }
-    .hero-card {
-      background: radial-gradient(circle at top, rgba(253, 216, 88, 0.38), #020617);
-      border-radius: 22px;
-      padding: 18px 18px 16px;
-      border: 1px solid rgba(248, 181, 64, 0.7);
-      color: #e5e7eb;
-      position: relative;
-      overflow: hidden;
-      isolation: isolate;
-    }
-    .hero-card::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at top left, rgba(253, 224, 71, 0.45), transparent 60%);
-      opacity: 0.85;
-      pointer-events: none;
-      mix-blend-mode: screen;
-    }
-    .hero-card-body { position: relative; z-index: 1; }
-    .hero-card-title {
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      color: #fef9c3;
-      margin-bottom: 6px;
-    }
-    .hero-card h3 {
-      font-size: 1.1rem;
-      margin-bottom: 6px;
-    }
-    .hero-card p {
-      font-size: 0.85rem;
-      margin-bottom: 10px;
-      color: #e5e7eb;
-    }
-    .hero-pill-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-bottom: 10px;
-    }
-    .hero-pill {
-      font-size: 0.72rem;
-      padding: 4px 9px;
-      border-radius: 999px;
-      background: rgba(15, 23, 42, 0.85);
-      border: 1px solid rgba(254, 249, 195, 0.6);
-    }
-    .hero-note {
-      font-size: 0.75rem;
-      color: #fefce8;
-    }
-    section {
-      margin-top: 28px;
-      background: rgba(15, 23, 42, 0.96);
-      border-radius: 22px;
-      padding: 20px 18px 18px;
-      border: 1px solid var(--border-soft);
-      box-shadow: 0 14px 34px rgba(15, 23, 42, 0.65);
-    }
-    section h2 {
-      font-family: 'Oswald', system-ui, sans-serif;
-      font-size: 1.15rem;
-      color: #f9fafb;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      margin-bottom: 12px;
-    }
-    .section-subtitle {
-      font-size: 0.95rem;
-      color: var(--text-muted);
-      margin-bottom: 14px;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 14px;
-    }
-    .card {
-      background: #020617;
-      border-radius: var(--radius-md);
-      padding: 14px 12px 12px;
-      border: 1px solid rgba(31, 41, 55, 0.95);
-    }
-    .card h3 {
-      font-size: 0.96rem;
-      margin-bottom: 4px;
-      color: #f3f4f6;
-    }
-    .card p {
-      font-size: 0.85rem;
-      color: #d1d5db;
-    }
-    .badge {
-      display: inline-block;
-      font-size: 0.7rem;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      padding: 3px 8px;
-      border-radius: 999px;
-      background: rgba(248, 181, 64, 0.12);
-      color: #fbbf24;
-      border: 1px solid rgba(248, 181, 64, 0.55);
-      margin-bottom: 6px;
-    }
-    .two-col {
-      display: grid;
-      grid-template-columns: minmax(0, 1.5fr) minmax(0, 1.2fr);
-      gap: 18px;
-    }
-    ul.list {
-      list-style: none;
-      padding-left: 0;
-    }
-    ul.list li {
-      display: flex;
-      align-items: flex-start;
-      gap: 8px;
-      font-size: 0.85rem;
-      color: #d1d5db;
-      margin-bottom: 6px;
-    }
-    ul.list li span.bullet {
-      margin-top: 3px;
-      font-size: 0.8rem;
-      color: var(--accent);
-    }
-    .pill-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 4px;
-    }
-    .pill {
-      font-size: 0.78rem;
-      padding: 4px 9px;
-      border-radius: 999px;
-      background: #020617;
-      border: 1px solid rgba(148, 163, 184, 0.5);
-      color: #e5e7eb;
-    }
-    .contact-box {
-      display: grid;
-      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.2fr);
-      gap: 18px;
-      align-items: flex-start;
-    }
-    .contact-card {
-      background: #020617;
-      border-radius: var(--radius-md);
-      padding: 14px 12px 12px;
-      border: 1px solid rgba(31, 41, 55, 0.95);
-    }
-    .contact-row {
-      font-size: 0.85rem;
-      color: #e5e7eb;
-      margin-bottom: 6px;
-    }
-    .contact-row span.label {
-      display: inline-block;
-      min-width: 70px;
-      color: var(--text-muted);
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      font-size: 0.7rem;
-    }
-    form {
-      display: grid;
-      gap: 10px;
-    }
-    label {
-      font-size: 0.8rem;
-      color: #cbd5f5;
-    }
-    input,
-    textarea {
-      width: 100%;
-      border-radius: 10px;
-      border: 1px solid rgba(51, 65, 85, 0.95);
-      padding: 7px 9px;
-      background: #020617;
-      color: #e5e7eb;
-      font-size: 0.85rem;
-    }
-    textarea {
-      min-height: 90px;
-      resize: vertical;
-    }
-    input::placeholder,
-    textarea::placeholder {
-      color: #64748b;
-      font-size: 0.8rem;
-    }
-    .form-note {
-      font-size: 0.76rem;
-      color: var(--text-muted);
-      margin-top: -2px;
-    }
-    button[type='submit'] {
-      margin-top: 4px;
-      justify-self: flex-start;
-    }
-    #projects .card figure {
-      margin: 0;
-      border-radius: 10px;
-      overflow: hidden;
-      border: 1px solid rgba(30, 64, 175, 0.5);
-      background: #020617;
-    }
-    #projects .card img {
-      aspect-ratio: 4 / 3;
-      object-fit: cover;
-    }
-    #projects figcaption {
-      padding: 4px 6px 6px;
-      font-size: 0.75rem;
-      text-align: center;
-    }
-    #projects figcaption.before { color: #9ca3af; }
-    #projects figcaption.after { color: #bbf7d0; }
-    footer {
-      max-width: var(--max-width);
-      margin: 20px auto 0;
-      padding: 10px 0 0;
-      font-size: 0.8rem;
-      color: #6b7280;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      justify-content: space-between;
-      border-top: 1px solid rgba(31, 41, 55, 0.9);
-    }
-    footer a {
-      color: #9ca3af;
-      text-decoration: none;
-    }
-    footer a:hover { text-decoration: underline; }
-    @media (max-width: 920px) {
-      .hero { grid-template-columns: minmax(0, 1fr); }
-      .hero-card { order: -1; }
-      section { padding: 18px 14px 14px; }
-      .two-col,
-      .contact-box { grid-template-columns: minmax(0, 1fr); }
-      .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    }
-    @media (max-width: 720px) {
-      header { flex-direction: column; align-items: flex-start; }
-      .nav-and-cta { align-items: flex-start; }
-      .header-cta { justify-content: flex-start; }
-    }
-    @media (max-width: 540px) {
-      .hero-text h2 { font-size: 1.72rem; }
-      .grid { grid-template-columns: minmax(0, 1fr); }
-      .page-wrapper { padding: 0 12px 32px; }
-      .hero { padding: 20px 16px 16px; }
-    }
-  </style>
+  <meta property="og:image" content="https://semototalhomesolutions.com/assets/img/STHS-LOGO.jpg" />
+
+  <!-- Main CSS Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
   <div class="page-wrapper">
+    <!-- HEADER -->
     <header>
       <div class="brand">
         <div class="brand-logo">
-          <img src="assets/img/logo-horizontal.png" alt="SEMO Total Home Solutions logo" />
+          <img src="assets/img/STHS-LOGO.jpg" alt="SEMO Total Home Solutions logo" />
         </div>
         <div class="brand-text">
           <h1>SEMO Total Home Solutions</h1>
@@ -514,17 +45,16 @@
           <a href="#about">Service Area</a>
           <a href="#plans">Home Care Plans</a>
           <a href="#projects">Projects</a>
-          <a href="landlords.html">Landlords & Investors</a>
+          <a href="landlords.html">Landlords &amp; Investors</a>
           <a href="testimonials.html">Testimonials</a>
           <a href="#contact">Contact</a>
         </nav>
-
         <div class="header-cta">
           <div>
             <div class="phone-label">Call or Text</div>
-            <div class="phone-number">(573) 282-0119</div>
+            <div class="phone-number">(573) 238-8732</div>
           </div>
-          <a href="tel:15732820119" class="call-btn">
+          <a href="tel:+15732388732" class="call-btn">
             <span class="icon">📞</span>
             <span>Free Estimate</span>
           </a>
@@ -533,50 +63,43 @@
     </header>
 
     <main>
+      <!-- HERO Section -->
       <section class="hero" id="top">
         <div class="hero-text">
           <h2>Your <span>Total Home</span> Partner in Southeast Missouri</h2>
           <p class="hero-sub">
             Owner-operated home repair, handyman work, remodeling, and maintenance plans within roughly 100–125 miles of <strong>63764</strong>. One call for everything from small fixes to full room makeovers.
           </p>
-
           <div class="hero-tags">
-            <span class="tag-pill">Handyman & Repairs</span>
-            <span class="tag-pill">Remodeling & Updates</span>
-            <span class="tag-pill">Home Maintenance Plans</span>
-            <span class="tag-pill">Landlords & Investors</span>
+            <div class="tag-pill">Handyman &amp; Repairs</div>
+            <div class="tag-pill">Remodeling &amp; Updates</div>
+            <div class="tag-pill">Home Maintenance Plans</div>
+            <div class="tag-pill">Landlords &amp; Investors</div>
           </div>
-
           <div class="hero-actions">
-            <a href="tel:15732820119" class="btn-primary">
+            <a href="tel:+15732388732" class="btn-primary">
               <span>📞 Call Now</span>
               <span>Get on the Schedule</span>
             </a>
-            <a href="#contact" class="btn-outline">
-              ✉️ Request a Callback
-            </a>
+            <a href="#contact" class="btn-outline">✉️ Request a Callback</a>
           </div>
-
           <div class="hero-meta">
-            <strong>Service Radius:</strong> Cape Girardeau • Jackson • Sikeston • Dexter • Poplar Bluff • Perryville • Southern Illinois & more
+            <strong>Service Radius:</strong> Cape Girardeau • Jackson • Sikeston • Dexter • Poplar Bluff • Perryville • Southern Illinois &amp; more
           </div>
         </div>
-
         <aside class="hero-card" aria-label="Featured services">
           <div class="hero-card-body">
             <div class="hero-card-title">Top Services</div>
-            <h3>Repairs, Remodels & Ready-To-Rent Work</h3>
+            <h3>Repairs, Remodels &amp; Ready-To-Rent Work</h3>
             <p>
               We help homeowners, landlords, and investors keep properties in top shape – on time, on budget, and done right the first time.
             </p>
-
             <div class="hero-pill-list">
-              <div class="hero-pill">Drywall & Paint</div>
-              <div class="hero-pill">Kitchens & Baths</div>
-              <div class="hero-pill">Decks & Exterior</div>
-              <div class="hero-pill">Make-Ready & Turns</div>
+              <div class="hero-pill">Drywall &amp; Paint</div>
+              <div class="hero-pill">Kitchens &amp; Baths</div>
+              <div class="hero-pill">Decks &amp; Exterior</div>
+              <div class="hero-pill">Make-Ready &amp; Turns</div>
             </div>
-
             <div class="hero-note">
               Ask about <strong>SEMO Home Care</strong> – recurring maintenance plans that catch problems early and keep your properties looking sharp.
             </div>
@@ -584,53 +107,48 @@
         </aside>
       </section>
 
+      <!-- SERVICES Section -->
       <section id="services">
         <h2>Services</h2>
         <p class="section-subtitle">
           One team for repair punch lists, remodels, and ongoing property care. If it touches your home, there’s a good chance we can help.
         </p>
-
         <div class="grid">
           <div class="card">
-            <span class="badge">Handyman & Repair</span>
-            <h3>Everyday Fixes & Small Jobs</h3>
+            <span class="badge">Handyman &amp; Repair</span>
+            <h3>Everyday Fixes &amp; Small Jobs</h3>
             <p>
               Doors, trim, drywall patches, leaks, light fixtures, faucets, hardware, caulking, minor plumbing and electrical, and more. Perfect for “honey-do” lists and inspection punch lists.
             </p>
           </div>
-
           <div class="card">
             <span class="badge">Interior Remodeling</span>
-            <h3>Kitchens, Baths & Living Spaces</h3>
+            <h3>Kitchens, Baths &amp; Living Spaces</h3>
             <p>
               Full or partial remodels, layout changes, cabinet installation, flooring, tile, backsplashes, painting, and trim upgrades that modernize your home.
             </p>
           </div>
-
           <div class="card">
-            <span class="badge">Exterior & Structures</span>
-            <h3>Decks, Porches & Repairs</h3>
+            <span class="badge">Exterior &amp; Structures</span>
+            <h3>Decks, Porches &amp; Repairs</h3>
             <p>
               Deck builds and rehabs, porch repairs, siding fixes, fascia/soffit work, exterior painting, steps, railings, and small outbuildings or sheds.
             </p>
           </div>
-
           <div class="card">
-            <span class="badge">Make-Ready & Turns</span>
-            <h3>Landlord & Investor Services</h3>
+            <span class="badge">Make-Ready &amp; Turns</span>
+            <h3>Landlord &amp; Investor Services</h3>
             <p>
               Rent-ready repairs, unit turns, punch lists from inspections, and light rehab for flips or buy-and-hold investors across SEMO. <a href="landlords.html" style="color:#93c5fd;">Learn more →</a>
             </p>
           </div>
-
           <div class="card">
             <span class="badge">Emergency Calls</span>
-            <h3>Urgent Issues & Storm Response</h3>
+            <h3>Urgent Issues &amp; Storm Response</h3>
             <p>
               Priority response for urgent issues like leaks, board-ups, and emergency repairs. We stabilize the situation, then plan permanent fixes.
             </p>
           </div>
-
           <div class="card">
             <span class="badge">Maintenance Plans</span>
             <h3>SEMO Home Care Memberships</h3>
@@ -641,6 +159,7 @@
         </div>
       </section>
 
+      <!-- SERVICE AREA & ABOUT Section -->
       <section id="about">
         <div class="two-col">
           <div>
@@ -648,23 +167,20 @@
             <p class="section-subtitle">
               Based in ZIP <strong>63764</strong> and serving a wide radius across Southeast Missouri and surrounding areas.
             </p>
-
             <ul class="list">
-              <li><span class="bullet">•</span> Cape Girardeau, Jackson & surrounding communities</li>
+              <li><span class="bullet">•</span> Cape Girardeau, Jackson &amp; surrounding communities</li>
               <li><span class="bullet">•</span> Sikeston, Dexter, Bloomfield, and nearby towns</li>
               <li><span class="bullet">•</span> Poplar Bluff, Piedmont, and western SEMO</li>
               <li><span class="bullet">•</span> Perryville, Marble Hill, and Bollinger County</li>
               <li><span class="bullet">•</span> Southern Illinois border areas (Cairo and beyond)</li>
               <li><span class="bullet">•</span> Generally up to ~100–125 miles from Marble Hill – just ask</li>
             </ul>
-
             <div class="pill-row" style="margin-top:10px;">
               <div class="pill">Residential Homes</div>
               <div class="pill">Rental Properties</div>
               <div class="pill">Small Commercial</div>
             </div>
           </div>
-
           <div>
             <h2>About SEMO Total Home Solutions</h2>
             <p class="section-subtitle">
@@ -680,12 +196,12 @@
         </div>
       </section>
 
+      <!-- HOME CARE PLANS Section -->
       <section id="plans">
         <h2>SEMO Home Care Plans</h2>
         <p class="section-subtitle">
           Optional maintenance memberships that keep your home or rentals in top shape year-round. Plans can be customized to what your property actually needs.
         </p>
-
         <div class="two-col">
           <div class="card">
             <span class="badge">Silver Plan</span>
@@ -695,13 +211,12 @@
             </p>
             <ul class="list">
               <li><span class="bullet">•</span> 2 scheduled visits per year</li>
-              <li><span class="bullet">•</span> Whole-home walkthrough & minor adjustments</li>
+              <li><span class="bullet">•</span> Whole-home walkthrough &amp; minor adjustments</li>
               <li><span class="bullet">•</span> Filter and battery checks (customer-supplied parts)</li>
               <li><span class="bullet">•</span> Priority scheduling on repair calls</li>
               <li><span class="bullet">•</span> Member discount on labor</li>
             </ul>
           </div>
-
           <div class="card">
             <span class="badge">Gold Plan</span>
             <h3>Quarterly Property Care</h3>
@@ -710,7 +225,7 @@
             </p>
             <ul class="list">
               <li><span class="bullet">•</span> 4 scheduled visits per year</li>
-              <li><span class="bullet">•</span> Seasonal maintenance & minor touch-ups</li>
+              <li><span class="bullet">•</span> Seasonal maintenance &amp; minor touch-ups</li>
               <li><span class="bullet">•</span> Priority for urgent calls</li>
               <li><span class="bullet">•</span> Preferred pricing on project work</li>
               <li><span class="bullet">•</span> Option to add units or properties</li>
@@ -719,65 +234,84 @@
         </div>
       </section>
 
+      <!-- PROJECTS (Before/After Gallery) Section -->
       <section id="projects">
         <h2>Recent Projects</h2>
         <p class="section-subtitle">
-          Three real-world examples that show the kind of “before and after” change you can expect from SEMO Total Home Solutions.
+          Here are four examples of our core services — each project shows the difference we can make from start to finish.
         </p>
-
         <div class="grid">
+          <!-- WHOLE ROOF REPLACEMENT -->
           <div class="card">
             <span class="badge">Whole Roof Replacement</span>
-            <h3>Mounds City, IL – Storm-Damaged Rental</h3>
+            <h3>Bollinger County, MO</h3>
             <p style="font-size:0.84rem;color:#d1d5db;margin-bottom:6px;">
-              Tree damage and years of neglect left this roof unsafe and leaking. We removed debris, tore off the failed roof, rebuilt rotten framing, and installed a new roof system.
+              Complete tear-off and installation of a new roof to protect this home and improve its curb appeal.
             </p>
             <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;">
               <figure>
-                <img
-                  src="assets/img/projects/roof-replacement-before-02.jpg"
-                  alt="House with severely damaged, sagging roof before full roof replacement" />
+                <img src="assets/img/projects/roof-replacement-before-02.jpg" alt="Home with severely damaged roof before replacement showing missing shingles and structural damage" />
                 <figcaption class="before">Before</figcaption>
               </figure>
               <figure>
-                <img
-                  src="assets/img/projects/roof-replacement-after-02.jpg"
-                  alt="Same house after full roof replacement with new framing and shingles" />
+                <img src="assets/img/projects/roof-replacement-after-02.jpg" alt="Home after complete roof replacement with new shingles and improved fascia" />
                 <figcaption class="after">After</figcaption>
               </figure>
             </div>
           </div>
 
+          <!-- WATER DRAINAGE INSTALL -->
           <div class="card">
             <span class="badge">Water Drainage Install</span>
-            <h3>Southeast Missouri – Standing Water Fix</h3>
+            <h3>Bollinger County, MO</h3>
             <p style="font-size:0.84rem;color:#d1d5db;margin-bottom:6px;">
-              Yard and foundation were taking on water every heavy rain. We regraded problem areas, installed drainage to move water away from the house, and protected the foundation from future damage.
-            </p>
-            <ul class="list" style="margin-top:4px;">
-              <li><span class="bullet">•</span> Identified low spots and water paths</li>
-              <li><span class="bullet">•</span> Installed drainage and redirected runoff</li>
-              <li><span class="bullet">•</span> Protected foundation and walkways</li>
-            </ul>
-          </div>
-
-          <div class="card">
-            <span class="badge">Exterior Prep & House Painting</span>
-            <h3>Mounds City, IL – Rental Refresh</h3>
-            <p style="font-size:0.84rem;color:#d1d5db;margin-bottom:6px;">
-              This exterior had peeling paint, exposed wood, and rotten trim. We repaired damage, prepped the siding, and finished it out to be ready for a fresh, long-lasting paint job.
+              Installed proper gutters and downspouts to channel water away from the foundation and prevent future damage.
             </p>
             <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;">
               <figure>
-                <img
-                  src="assets/img/projects/house-painting-before-02.jpg"
-                  alt="House exterior before painting with peeling paint and exposed wood" />
+                <img src="assets/img/projects/water-drainage-before-01.jpg" alt="Property before water drainage installation with overgrown branches and poor runoff" />
                 <figcaption class="before">Before</figcaption>
               </figure>
               <figure>
-                <img
-                  src="assets/img/projects/house-painting-after-02.jpg"
-                  alt="Same house after exterior repairs and prep work ready for paint" />
+                <img src="assets/img/projects/water-drainage-after-01.jpg" alt="Property after water drainage install showing cleared roofline and improved drainage" />
+                <figcaption class="after">After</figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <!-- HOUSE PAINTING -->
+          <div class="card">
+            <span class="badge">House Painting</span>
+            <h3>Bollinger County, MO</h3>
+            <p style="font-size:0.84rem;color:#d1d5db;margin-bottom:6px;">
+              Prepped and painted this home’s exterior to restore its charm and protect it for years to come.
+            </p>
+            <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;">
+              <figure>
+                <img src="assets/img/projects/house-painting-before-02.jpg" alt="House exterior before painting with peeling paint and worn surfaces" />
+                <figcaption class="before">Before</figcaption>
+              </figure>
+              <figure>
+                <img src="assets/img/projects/house-painting-after-02.jpg" alt="House exterior after painting showing fresh trim and revitalized siding" />
+                <figcaption class="after">After</figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <!-- ROLL-UP DOOR INSTALL -->
+          <div class="card">
+            <span class="badge">Roll-Up Door Install</span>
+            <h3>Cape Girardeau County, MO</h3>
+            <p style="font-size:0.84rem;color:#d1d5db;margin-bottom:6px;">
+              Upgraded an open carport into a secure garage by installing a durable roll-up door for improved safety and convenience.
+            </p>
+            <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;">
+              <figure>
+                <img src="assets/img/projects/rollup-door-before-01.jpg" alt="Open carport before roll-up door installation, exposing contents to weather" />
+                <figcaption class="before">Before</figcaption>
+              </figure>
+              <figure>
+                <img src="assets/img/projects/rollup-door-after-01.jpg" alt="Garage secured after roll-up door install, protecting the space and enhancing the home’s security" />
                 <figcaption class="after">After</figcaption>
               </figure>
             </div>
@@ -785,17 +319,17 @@
         </div>
       </section>
 
+      <!-- CONTACT Section -->
       <section id="contact">
         <h2>Request Service or a Free Estimate</h2>
         <p class="section-subtitle">
           Call or text for the fastest response. You can also send a quick message using the form and we’ll follow up as soon as possible.
         </p>
-
         <div class="contact-box">
           <div class="contact-card">
             <div class="contact-row">
               <span class="label">Phone</span>
-              <span>(573) 282-0119</span>
+              <span>(573) 238-8732</span>
             </div>
             <div class="contact-row">
               <span class="label">Email</span>
@@ -813,8 +347,8 @@
               If you’re outside our normal radius, reach out anyway – we can often help or point you in the right direction.
             </p>
           </div>
-
           <div>
+            <!-- Note: Form is front-end only; can wire to an email service like Formspree later -->
             <form name="contact">
               <div>
                 <label for="name">Name</label>
@@ -835,9 +369,7 @@
               <p class="form-note">
                 This form does not book an appointment automatically, but it gives us everything we need to follow up quickly.
               </p>
-              <button type="submit" class="btn-primary">
-                ✉️ Send Request
-              </button>
+              <button type="submit" class="btn-primary">✉️ Send Request</button>
             </form>
           </div>
         </div>
@@ -847,21 +379,22 @@
     <footer>
       <div>© <span id="year"></span> SEMO Total Home Solutions. All rights reserved.</div>
       <div>
-        <a href="testimonials.html">Testimonials</a> ·
-        <a href="landlords.html">Landlords & Investors</a>
+        <a href="testimonials.html">Testimonials</a> · 
+        <a href="landlords.html">Landlords &amp; Investors</a>
       </div>
     </footer>
   </div>
 
+  <!-- LocalBusiness Schema (JSON-LD) for Local SEO -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "SEMO Total Home Solutions",
-    "image": "https://semototalhomesolutions.com/assets/img/logo-horizontal.png",
+    "image": "https://semototalhomesolutions.com/assets/img/STHS-LOGO.jpg",
     "@id": "https://semototalhomesolutions.com",
     "url": "https://semototalhomesolutions.com",
-    "telephone": "+1-573-282-0119",
+    "telephone": "+1-573-238-8732",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Marble Hill",
@@ -869,21 +402,30 @@
       "postalCode": "63764",
       "addressCountry": "US"
     },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "",
+      "longitude": ""
+    },
     "areaServed": {
       "@type": "GeoCircle",
       "geoRadius": 200000
     },
     "priceRange": "$$",
     "description": "SEMO Total Home Solutions provides professional home repair, handyman services, remodeling, and maintenance plans across Southeast Missouri and surrounding areas.",
-    "sameAs": []
+    "sameAs": [
+      "https://www.facebook.com/your-page-url-here"
+    ]
   }
   </script>
 
   <script>
+    // Update footer year automatically
     document.getElementById('year').textContent = new Date().getFullYear();
-    document.querySelector("form[name='contact']").addEventListener('submit', function (e) {
+    // Simple client-side form handler (placeholder functionality)
+    document.querySelector("form[name='contact']").addEventListener('submit', function(e) {
       e.preventDefault();
-      alert('Thanks! Your request has been recorded. For urgent issues, please call or text 573-282-0119.');
+      alert('Thanks! Your request has been recorded. For urgent issues, please call or text 573-238-8732.');
     });
   </script>
 </body>
