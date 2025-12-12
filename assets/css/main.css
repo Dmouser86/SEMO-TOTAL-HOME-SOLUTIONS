@@ -4,8 +4,8 @@
 
 :root {
   /* Logo orange (from your image) */
-  --accent: #ff7f00;
---accent-soft: #ff9f40;
+  --accent: #ff6a00;
+--accent-soft: #ff8f33;
 
   /* Backgrounds */
   --bg-deep: #020617;   /* main background */
