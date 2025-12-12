@@ -1,8 +1,10 @@
 /* SEMO Total Home Solutions - dark/charcoal theme with orange accents only */
 
 :root {
-  --accent: #ff8a1a;
-  --accent-soft: #ffb347;
+  --accent: #ff7800;      /* new logo orange */
+  --accent-soft: #ffad33; /* lighter version for gradients */
+  /* leave everything else under :root as-is */
+}
 
   --bg-deep: #020617;      /* near-black navy */
   --bg-dark: #020617;
