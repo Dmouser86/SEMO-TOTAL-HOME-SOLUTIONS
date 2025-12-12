@@ -1,5 +1,7 @@
-// SEMO Total Home Solutions - Simple JS
+// SEMO Total Home Solutions - basic JS
+
 document.addEventListener("DOMContentLoaded", function () {
+  // Mobile nav toggle
   var navToggle = document.getElementById("navToggle");
   var navMenu = document.getElementById("navMenu");
 
@@ -9,6 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  // Footer year
   var yearEl = document.getElementById("year");
   if (yearEl) {
     yearEl.textContent = new Date().getFullYear();
