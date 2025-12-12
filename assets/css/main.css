@@ -1,16 +1,17 @@
-/* SEMO Total Home Solutions - navy / charcoal theme with logo orange accents */
+/* SEMO Total Home Solutions - clean reset
+   Deep navy background, logo orange accents, high-contrast white text
+*/
 
 :root {
-  /* Logo orange sampled from image: rgb(255,134,11) */
+  /* Logo orange (from your image) */
   --accent: #ff860b;
   --accent-soft: #ffb060;
 
-  --bg-deep: #020617;      /* near-black navy */
-  --bg-dark: #020617;
-  --bg-mid: #020b2a;       /* dark navy */
-  --bg-card: #020617;
-  --bg-card-soft: #020617;
+  /* Backgrounds */
+  --bg-deep: #020617;   /* main background */
+  --bg-panel: #020b2a;  /* cards / panels */
 
+  /* Neutrals */
   --gray-900: #020617;
   --gray-700: #4b5563;
   --gray-500: #9ca3af;
@@ -20,9 +21,11 @@
 
   --radius-lg: 18px;
   --radius-xl: 26px;
-  --shadow-soft: 0 18px 45px rgba(0, 0, 0, 0.7);
-  --shadow-card: 0 14px 35px rgba(0, 0, 0, 0.85);
+  --shadow-soft: 0 18px 40px rgba(0, 0, 0, 0.75);
+  --shadow-card: 0 14px 35px rgba(0, 0, 0, 0.9);
 }
+
+/* Reset / base */
 
 *,
 *::before,
@@ -30,8 +33,7 @@
   box-sizing: border-box;
 }
 
-html,
-body {
+html, body {
   margin: 0;
   padding: 0;
 }
@@ -42,14 +44,14 @@ body {
   color: var(--white);
 }
 
-/* Page background: deep navy gradient */
+/* Page background */
 
 .page-gradient {
   min-height: 100vh;
   background:
-    radial-gradient(circle at top left, rgba(56, 189, 248, 0.18), transparent 60%),
-    radial-gradient(circle at bottom right, rgba(37, 99, 235, 0.24), transparent 60%),
-    linear-gradient(180deg, #020617 0%, #020617 45%, #000000 100%);
+    radial-gradient(circle at top left, rgba(56, 189, 248, 0.16), transparent 60%),
+    radial-gradient(circle at bottom right, rgba(37, 99, 235, 0.22), transparent 60%),
+    linear-gradient(180deg, #020617 0%, #020617 50%, #000000 100%);
 }
 
 /* Layout */
@@ -68,29 +70,26 @@ body {
   position: relative;
 }
 
-/* alternate sections: slightly lighter navy panel */
-
 .section-alt::before {
   content: "";
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle at top left, rgba(56, 189, 248, 0.19), transparent 60%),
-    radial-gradient(circle at bottom right, rgba(15, 23, 42, 0.9), transparent 70%),
-    linear-gradient(180deg, #020b2a, #020617);
+    radial-gradient(circle at top left, rgba(56, 189, 248, 0.17), transparent 65%),
+    linear-gradient(180deg, #020b2a 0%, #020617 100%);
   opacity: 1;
   z-index: 0;
 }
 
-/* HEADER / NAV */
+/* HEADER */
 
 .site-header {
   position: sticky;
   top: 0;
   z-index: 40;
   background: linear-gradient(180deg, rgba(3, 7, 18, 0.98), rgba(3, 7, 18, 0.92));
-  backdrop-filter: blur(18px);
-  border-bottom: 1px solid rgba(148, 163, 184, 0.25);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.35);
 }
 
 .nav-container {
@@ -134,6 +133,8 @@ body {
   letter-spacing: 0.16em;
   color: var(--gray-300);
 }
+
+/* NAV */
 
 .nav-links {
   display: flex;
@@ -272,13 +273,6 @@ body {
   white-space: nowrap;
 }
 
-.btn-sub {
-  font-size: 0.75rem;
-  font-weight: 500;
-  opacity: 0.9;
-  margin-left: 0.3rem;
-}
-
 .btn.primary {
   background: linear-gradient(135deg, var(--accent), var(--accent-soft));
   color: #1f0800;
@@ -308,7 +302,7 @@ body {
 /* Hero card */
 
 .hero-card {
-  background: linear-gradient(145deg, #020b2a, #020617);
+  background: linear-gradient(145deg, var(--bg-panel), var(--bg-deep));
   border-radius: 24px;
   padding: 1.6rem 1.55rem 1.7rem;
   box-shadow: var(--shadow-soft);
@@ -333,21 +327,6 @@ body {
 .hero-card h2 {
   font-size: 1.25rem;
   margin: 0 0 0.6rem;
-}
-
-.hero-pill-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.35rem;
-  margin: 0.4rem 0 0.8rem;
-}
-
-.hero-pill {
-  font-size: 0.76rem;
-  padding: 0.18rem 0.55rem;
-  border-radius: 999px;
-  background: rgba(15, 23, 42, 0.95);
-  border: 1px solid rgba(148, 163, 184, 0.6);
 }
 
 .hero-note {
@@ -382,7 +361,7 @@ body {
   font-size: 0.94rem;
 }
 
-/* Generic cards */
+/* Cards */
 
 .cards-grid {
   display: grid;
@@ -391,15 +370,11 @@ body {
   z-index: 1;
 }
 
-.cards-grid.three-up {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
 .card {
-  background: linear-gradient(145deg, #020b2a, #020617);
+  background: linear-gradient(145deg, var(--bg-panel), var(--bg-deep));
   border-radius: var(--radius-lg);
   padding: 1.45rem 1.4rem 1.3rem;
-  border: 1px solid rgba(148, 163, 184, 0.5);
+  border: 1px solid rgba(148, 163, 184, 0.55);
   box-shadow: var(--shadow-card);
 }
 
@@ -429,7 +404,7 @@ body {
   color: var(--accent-soft);
 }
 
-/* Lists */
+/* Simple list */
 
 .list {
   list-style: none;
@@ -449,30 +424,13 @@ body {
   color: var(--accent-soft);
 }
 
-/* Pill row */
+/* Steps list (ordered) */
 
-.pill-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.45rem;
-  margin-top: 0.9rem;
-}
-
-.pill {
-  font-size: 0.78rem;
-  padding: 0.28rem 0.65rem;
-  border-radius: 999px;
-  border: 1px solid rgba(148, 163, 184, 0.6);
-  background: rgba(15, 23, 42, 0.95);
-  color: var(--gray-300);
-}
-
-/* Body copy */
-
-.body-copy {
+.steps-list {
+  margin: 0 0 1rem;
+  padding-left: 1.25rem;
   font-size: 0.9rem;
   color: var(--gray-100);
-  margin: 0 0 0.6rem;
 }
 
 /* Two-column layout */
@@ -485,10 +443,6 @@ body {
 }
 
 /* Projects */
-
-.projects-grid {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
 
 .before-after-grid {
   display: grid;
@@ -519,13 +473,8 @@ body {
   padding: 0.2rem 0.55rem 0.35rem;
 }
 
-.before {
-  color: #fca5a5;
-}
-
-.after {
-  color: #bbf7d0;
-}
+.before { color: #fca5a5; }
+.after  { color: #bbf7d0; }
 
 /* FAQ */
 
@@ -537,7 +486,7 @@ body {
 }
 
 .faq-item {
-  background: linear-gradient(145deg, #020b2a, #020617);
+  background: linear-gradient(145deg, var(--bg-panel), var(--bg-deep));
   border-radius: 18px;
   padding: 1.1rem 1.15rem;
   border: 1px solid rgba(148, 163, 184, 0.6);
@@ -556,26 +505,6 @@ body {
   color: var(--gray-100);
 }
 
-/* Testimonials */
-
-.testimonial-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.testimonial-quote {
-  margin: 0 0 0.7rem;
-  font-size: 0.9rem;
-  color: var(--gray-100);
-}
-
-.testimonial-name {
-  margin: 0;
-  font-size: 0.82rem;
-  color: var(--gray-300);
-}
-
 /* Request / Google form */
 
 .request-grid {
@@ -584,13 +513,6 @@ body {
   align-items: start;
   position: relative;
   z-index: 1;
-}
-
-.steps-list {
-  margin: 0 0 1rem;
-  padding-left: 1.25rem;
-  font-size: 0.9rem;
-  color: var(--gray-100);
 }
 
 .request-note {
@@ -603,7 +525,7 @@ body {
 }
 
 .request-form-wrap {
-  background: #020617;
+  background: var(--bg-panel);
   border-radius: 18px;
   padding: 0.6rem;
   border: 1px solid rgba(148, 163, 184, 0.6);
@@ -649,10 +571,10 @@ body {
   color: var(--gray-300);
 }
 
-/* Contact CTA */
+/* Contact CTA card */
 
 .contact-cta {
-  background: linear-gradient(145deg, #020b2a, #020617);
+  background: linear-gradient(145deg, var(--bg-panel), var(--bg-deep));
   border-radius: 22px;
   padding: 1.4rem 1.35rem 1.5rem;
   border: 1px solid rgba(148, 163, 184, 0.6);
@@ -751,12 +673,6 @@ body {
   }
 }
 
-@media (min-width: 900px) {
-  .projects-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
 @media (max-width: 780px) {
   .nav-toggle {
     display: flex;
@@ -790,8 +706,7 @@ body {
 }
 
 @media (max-width: 640px) {
-  .cards-grid,
-  .cards-grid.three-up {
+  .cards-grid {
     grid-template-columns: minmax(0, 1fr);
   }
 }
@@ -799,10 +714,6 @@ body {
 @media (max-width: 480px) {
   .container {
     width: min(100% - 1.75rem, 100%);
-  }
-
-  .hero-card {
-    margin-left: 0;
   }
 
   .hero-actions {
