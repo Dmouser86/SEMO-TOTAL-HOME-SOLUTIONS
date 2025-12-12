@@ -1,14 +1,13 @@
-/* SEMO Total Home Solutions - dark/charcoal theme with orange accents only */
+/* SEMO Total Home Solutions - navy / charcoal theme with logo orange accents */
 
 :root {
-  --accent: #ff7800;      /* new logo orange */
-  --accent-soft: #ffad33; /* lighter version for gradients */
-  /* leave everything else under :root as-is */
-}
+  /* Logo orange sampled from image: rgb(255,134,11) */
+  --accent: #ff860b;
+  --accent-soft: #ffb060;
 
   --bg-deep: #020617;      /* near-black navy */
   --bg-dark: #020617;
-  --bg-mid: #0b1120;       /* dark slate/navy */
+  --bg-mid: #020b2a;       /* dark navy */
   --bg-card: #020617;
   --bg-card-soft: #020617;
 
@@ -43,17 +42,17 @@ body {
   color: var(--white);
 }
 
-/* Page background: deep navy/charcoal gradient, NO orange */
+/* Page background: deep navy gradient */
 
 .page-gradient {
   min-height: 100vh;
   background:
-    radial-gradient(circle at top left, rgba(30, 64, 175, 0.22), transparent 60%),
-    radial-gradient(circle at bottom right, rgba(15, 23, 42, 0.65), transparent 65%),
-    linear-gradient(180deg, #020617 0%, #020617 40%, #000000 100%);
+    radial-gradient(circle at top left, rgba(56, 189, 248, 0.18), transparent 60%),
+    radial-gradient(circle at bottom right, rgba(37, 99, 235, 0.24), transparent 60%),
+    linear-gradient(180deg, #020617 0%, #020617 45%, #000000 100%);
 }
 
-/* Layout helpers */
+/* Layout */
 
 .container {
   width: min(1120px, 100% - 2.5rem);
@@ -69,16 +68,16 @@ body {
   position: relative;
 }
 
-/* alternate sections: subtle cool overlay, no orange */
+/* alternate sections: slightly lighter navy panel */
 
 .section-alt::before {
   content: "";
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle at top left, rgba(30, 64, 175, 0.16), transparent 60%),
-    radial-gradient(circle at bottom right, rgba(15, 23, 42, 0.85), transparent 70%),
-    linear-gradient(180deg, rgba(0, 0, 0, 0.96), rgba(0, 0, 0, 1));
+    radial-gradient(circle at top left, rgba(56, 189, 248, 0.19), transparent 60%),
+    radial-gradient(circle at bottom right, rgba(15, 23, 42, 0.9), transparent 70%),
+    linear-gradient(180deg, #020b2a, #020617);
   opacity: 1;
   z-index: 0;
 }
@@ -89,7 +88,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 40;
-  background: linear-gradient(180deg, rgba(3, 7, 18, 0.98), rgba(3, 7, 18, 0.9));
+  background: linear-gradient(180deg, rgba(3, 7, 18, 0.98), rgba(3, 7, 18, 0.92));
   backdrop-filter: blur(18px);
   border-bottom: 1px solid rgba(148, 163, 184, 0.25);
 }
@@ -214,6 +213,7 @@ body {
   line-height: 1.05;
   margin: 0 0 1rem;
   letter-spacing: -0.01em;
+  color: var(--white);
 }
 
 .hero h1 span {
@@ -305,10 +305,10 @@ body {
   width: 100%;
 }
 
-/* Hero card – dark navy only */
+/* Hero card */
 
 .hero-card {
-  background: linear-gradient(145deg, #0b1120, #020617);
+  background: linear-gradient(145deg, #020b2a, #020617);
   border-radius: 24px;
   padding: 1.6rem 1.55rem 1.7rem;
   box-shadow: var(--shadow-soft);
@@ -373,6 +373,7 @@ body {
   font-size: 1.6rem;
   margin: 0 0 0.4rem;
   letter-spacing: 0.02em;
+  color: var(--white);
 }
 
 .section-subtitle {
@@ -395,7 +396,7 @@ body {
 }
 
 .card {
-  background: linear-gradient(145deg, #020617, #020617);
+  background: linear-gradient(145deg, #020b2a, #020617);
   border-radius: var(--radius-lg);
   padding: 1.45rem 1.4rem 1.3rem;
   border: 1px solid rgba(148, 163, 184, 0.5);
@@ -405,6 +406,7 @@ body {
 .card h3 {
   margin: 0.35rem 0 0.55rem;
   font-size: 1.05rem;
+  color: var(--white);
 }
 
 .card p {
@@ -482,14 +484,6 @@ body {
   z-index: 1;
 }
 
-/* Plans */
-
-.card-intro {
-  margin: 0 0 0.6rem;
-  font-size: 0.86rem;
-  color: var(--gray-300);
-}
-
 /* Projects */
 
 .projects-grid {
@@ -533,7 +527,7 @@ body {
   color: #bbf7d0;
 }
 
-/* FAQ – dark background only, no orange wash */
+/* FAQ */
 
 .faq-grid {
   display: grid;
@@ -543,7 +537,7 @@ body {
 }
 
 .faq-item {
-  background: linear-gradient(145deg, #020617, #020617);
+  background: linear-gradient(145deg, #020b2a, #020617);
   border-radius: 18px;
   padding: 1.1rem 1.15rem;
   border: 1px solid rgba(148, 163, 184, 0.6);
@@ -553,6 +547,7 @@ body {
 .faq-item h3 {
   margin: 0 0 0.4rem;
   font-size: 0.98rem;
+  color: var(--white);
 }
 
 .faq-item p {
@@ -654,10 +649,10 @@ body {
   color: var(--gray-300);
 }
 
-/* Contact CTA – dark, no orange fill */
+/* Contact CTA */
 
 .contact-cta {
-  background: linear-gradient(145deg, #020617, #020617);
+  background: linear-gradient(145deg, #020b2a, #020617);
   border-radius: 22px;
   padding: 1.4rem 1.35rem 1.5rem;
   border: 1px solid rgba(148, 163, 184, 0.6);
@@ -667,6 +662,7 @@ body {
 
 .contact-cta h3 {
   margin: 0 0 0.55rem;
+  color: var(--white);
 }
 
 .contact-cta p {
@@ -694,6 +690,7 @@ body {
   margin: 0 0 0.2rem;
   font-weight: 600;
   font-size: 0.95rem;
+  color: var(--white);
 }
 
 .footer-text {
@@ -754,9 +751,9 @@ body {
   }
 }
 
-@media (max-width: 900px) {
+@media (min-width: 900px) {
   .projects-grid {
-    grid-template-columns: minmax(0, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
