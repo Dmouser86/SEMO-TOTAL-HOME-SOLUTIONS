@@ -108,9 +108,8 @@ body {
 }
 
 .brand-logo {
-  height: 40px;
+  height: 90px;   /* Increase logo size here */
   width: auto;
-  display: block;
 }
 
 .brand-text {
