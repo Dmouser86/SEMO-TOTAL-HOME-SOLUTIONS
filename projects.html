@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | SEMO Total Home Solutions</title>
+  <meta name="description" content="Before and after project photos from SEMO Total Home Solutions, including roof replacement, roll-up door install, drainage work and exterior painting in Southeast Missouri." />
+  <link rel="icon" type="image/png" href="assets/img/logo-horizontal.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Oswald:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body class="page-gradient">
+  <a href="tel:+15732388732" class="floating-cta">
+    <span class="floating-cta-label">Call Now</span>
+    <span class="floating-cta-sub">Free estimate</span>
+  </a>
+
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand">
+        <img src="assets/img/logo-horizontal.png" alt="SEMO Total Home Solutions logo" class="brand-logo" />
+        <div class="brand-text">
+          <span class="brand-name">SEMO Total Home Solutions</span>
+          <span class="brand-tagline">Home repair • Remodels • Maintenance</span>
+        </div>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation" id="navToggle">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="projects.html" class="active">Projects</a>
+        <a href="index.html#plans">Home Care Plans</a>
+        <a href="contact.html">Contact</a>
+        <a href="tel:+15732388732" class="nav-cta">📞 573-238-8732</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <header class="section-header">
+          <h1>Project gallery</h1>
+          <p class="section-subtitle">
+            A closer look at a few recent jobs. All photos are real work done by SEMO Total Home Solutions.
+          </p>
+        </header>
+
+        <div class="projects-grid">
+          <!-- Roof rebuild -->
+          <article class="project-card">
+            <span class="badge">Roof & exterior rebuild</span>
+            <h3>Storm-damaged home rebuild</h3>
+            <p>
+              This home had heavy storm damage: tree impact, torn shingles, rotten trim and general neglect. We stabilized
+              the structure, cleaned everything up and installed a full new roof and exterior details.
+            </p>
+            <div class="before-after-grid">
+              <figure>
+                <img src="assets/img/roof-replacement-before-02.jpg" alt="Roof and exterior before rebuild" loading="lazy" />
+                <figcaption class="before">Before</figcaption>
+              </figure>
+              <figure>
+                <img src="assets/img/roof-replacement-before-01.jpg" alt="Roof and exterior after rebuild" loading="lazy" />
+                <figcaption class="after">After</figcaption>
+              </figure>
+            </div>
+          </article>
+
+          <!-- Roll-up door -->
+          <article class="project-card">
+            <span class="badge">Roll-up door install</span>
+            <h3>Securing a commercial opening</h3>
+            <p>
+              An open bay left this building exposed. We repaired the framing and installed a roll-up door so the owner
+              could secure the space and actually use it.
+            </p>
+            <div class="before-after-grid single">
+              <figure>
+                <img src="assets/img/rollup-door-before-01.jpg" alt="Roll-up door framing and finished install" loading="lazy" />
+              </figure>
+            </div>
+          </article>
+
+          <!-- Drainage -->
+          <article class="project-card">
+            <span class="badge">Drainage install</span>
+            <h3>Moving water away from the foundation</h3>
+            <p>
+              Water was pooling against the house and creating long-term headaches. We installed drainage to collect and
+              redirect water away from the structure.
+            </p>
+            <div class="before-after-grid single">
+              <figure>
+                <img src="assets/img/drainage-install-before-01.jpg" alt="Drainage installation alongside a home" loading="lazy" />
+              </figure>
+            </div>
+          </article>
+
+          <!-- Exterior paint -->
+          <article class="project-card">
+            <span class="badge">Exterior paint & trim</span>
+            <h3>Curb-appeal refresh on a brick home</h3>
+            <p>
+              Fresh paint, detail work and cleanup turned a tired exterior into something the owner can feel proud to pull
+              up to every day.
+            </p>
+            <div class="before-after-grid single">
+              <figure>
+                <img src="assets/img/house-painting-before-01.jpg" alt="Exterior painting and trim collage on brick home" loading="lazy" />
+              </figure>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <p class="footer-brand">SEMO Total Home Solutions</p>
+        <p class="footer-text">
+          Home repair, remodeling and maintenance throughout Southeast Missouri and nearby Southern Illinois.
+        </p>
+      </div>
+      <div class="footer-links">
+        <span>📞 <a href="tel:+15732388732">573-238-8732</a></span>
+        <span>✉️ <a href="mailto:danny@semototalhomesolutions.com">danny@semototalhomesolutions.com</a></span>
+        <span>📍 Based near Marble Hill, MO</span>
+      </div>
+    </div>
+    <p class="footer-bottom">© <span id="year"></span> SEMO Total Home Solutions. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    if (navToggle && navLinks) {
+      navToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('open');
+      });
+    }
+    const yearSpan = document.getElementById('year');
+    if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
