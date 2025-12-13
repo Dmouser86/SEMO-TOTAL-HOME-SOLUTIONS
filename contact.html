@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | SEMO Total Home Solutions</title>
+  <meta name="description" content="Contact SEMO Total Home Solutions for home repair, remodeling and maintenance work in Southeast Missouri. Call, text or send us a request through the online form." />
+  <link rel="icon" type="image/png" href="assets/img/logo-horizontal.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Oswald:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body class="page-gradient">
+  <a href="tel:+15732388732" class="floating-cta">
+    <span class="floating-cta-label">Call Now</span>
+    <span class="floating-cta-sub">Free estimate</span>
+  </a>
+
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand">
+        <img src="assets/img/logo-horizontal.png" alt="SEMO Total Home Solutions logo" class="brand-logo" />
+        <div class="brand-text">
+          <span class="brand-name">SEMO Total Home Solutions</span>
+          <span class="brand-tagline">Home repair • Remodels • Maintenance</span>
+        </div>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation" id="navToggle">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="projects.html">Projects</a>
+        <a href="index.html#plans">Home Care Plans</a>
+        <a href="contact.html" class="active">Contact</a>
+        <a href="tel:+15732388732" class="nav-cta">📞 573-238-8732</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container contact-grid">
+        <div>
+          <header class="section-header align-left">
+            <h1>Contact & service requests</h1>
+            <p class="section-subtitle">
+              Tell us a little bit about your project or repair and we’ll follow up as soon as we can.
+            </p>
+          </header>
+          <ul class="contact-list">
+            <li><span>Phone / Text:</span> <a href="tel:+15732388732">573-238-8732</a></li>
+            <li><span>Email:</span> <a href="mailto:danny@semototalhomesolutions.com">danny@semototalhomesolutions.com</a></li>
+            <li><span>Base:</span> Marble Hill, MO (serving much of SEMO and Southern Illinois)</li>
+          </ul>
+          <p class="contact-note">
+            If you can, include photos when we follow up by text or email – it helps us give a better answer and ballpark.
+          </p>
+        </div>
+
+        <div class="request-form-wrap">
+          <!-- Google Form embed -->
+          <iframe
+            src="https://docs.google.com/forms/d/e/1FAIpQLSd8uSHJzqOj3UWaSNt7oIuIqUrcub2dFu0XJgd-uC72rzfYjQ/viewform?embedded=true"
+            width="100%"
+            height="700"
+            frameborder="0"
+            marginheight="0"
+            marginwidth="0"
+          >
+            Loading…
+          </iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <p class="footer-brand">SEMO Total Home Solutions</p>
+        <p class="footer-text">
+          Home repair, remodeling and maintenance throughout Southeast Missouri and nearby Southern Illinois.
+        </p>
+      </div>
+      <div class="footer-links">
+        <span>📞 <a href="tel:+15732388732">573-238-8732</a></span>
+        <span>✉️ <a href="mailto:danny@semototalhomesolutions.com">danny@semototalhomesolutions.com</a></span>
+        <span>📍 Based near Marble Hill, MO</span>
+      </div>
+    </div>
+    <p class="footer-bottom">© <span id="year"></span> SEMO Total Home Solutions. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    if (navToggle && navLinks) {
+      navToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('open');
+      });
+    }
+    const yearSpan = document.getElementById('year');
+    if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
