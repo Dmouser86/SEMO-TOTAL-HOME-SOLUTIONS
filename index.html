@@ -1,359 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- BASIC META -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SEMO Total Home Solutions | Home Repair & Remodeling in Southeast Missouri</title>
-  <meta name="description" content="SEMO Total Home Solutions provides home repair, remodeling, handyman services and maintenance plans for homeowners, landlords and investors across Southeast Missouri. Call or text 573-238-8732 for a free estimate." />
+  <title>SEMO Total Home Solutions | Home Repair & Renovation in Southeast Missouri</title>
+  <meta name="description" content="SEMO Total Home Solutions provides reliable home repair, remodeling, and renovation services across Southeast Missouri. Free estimates. Quality craftsmanship." />
 
-  <link rel="icon" type="image/png" href="assets/img/logo-horizontal.png" />
+  <!-- SEO / SOCIAL -->
+  <link rel="canonical" href="https://www.semototalhomesolutions.com/" />
+  <meta property="og:title" content="SEMO Total Home Solutions" />
+  <meta property="og:description" content="Reliable home repair & renovation in Southeast Missouri. Quality work. Free estimates." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.semototalhomesolutions.com/" />
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Oswald:wght@400;500;600&display=swap" rel="stylesheet" />
+  <!-- STYLES -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
 
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <!-- GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- JS -->
+  <script defer src="assets/js/main.js"></script>
 </head>
-<body class="page-gradient">
-  <!-- Floating CTA (mobile) -->
-  <a href="tel:+15732388732" class="floating-cta">
-    <span class="floating-cta-label">Call Now</span>
-    <span class="floating-cta-sub">Free estimate</span>
-  </a>
 
-  <!-- HEADER / NAV -->
+<body>
+
+  <!-- ================= HEADER / NAV ================= -->
   <header class="site-header">
-    <div class="container nav-container">
-      <a href="index.html" class="brand">
-        <img src="assets/img/logo-horizontal.png" alt="SEMO Total Home Solutions logo" class="brand-logo" />
-        <div class="brand-text">
-          <span class="brand-name">SEMO Total Home Solutions</span>
-          <span class="brand-tagline">Home repair • Remodels • Maintenance</span>
-        </div>
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <img src="assets/img/logo-horizontal.png" alt="SEMO Total Home Solutions Logo">
       </a>
 
-      <button class="nav-toggle" aria-label="Toggle navigation" id="navToggle">
-        <span></span><span></span><span></span>
-      </button>
-
-      <nav class="nav-links" id="navLinks">
+      <nav class="nav-menu" id="navMenu">
         <a href="index.html">Home</a>
         <a href="services.html">Services</a>
         <a href="projects.html">Projects</a>
-        <a href="index.html#plans">Home Care Plans</a>
-        <a href="contact.html">Contact</a>
-        <a href="tel:+15732388732" class="nav-cta">📞 573-238-8732</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="contact.html" class="nav-cta">Get a Quote</a>
       </nav>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
   </header>
 
-  <main>
-    <!-- HERO -->
-    <section class="section hero">
-      <div class="container hero-grid">
-        <div class="hero-text">
-          <p class="eyebrow">Owner–operated • Southeast Missouri</p>
-          <h1>Your <span>Total Home</span> partner for repairs, remodels & maintenance</h1>
-          <p class="hero-sub">
-            One call for everything from small fixes to full room makeovers. We help homeowners, landlords and investors
-            keep properties solid, safe and looking sharp.
-          </p>
-          <div class="hero-tags">
-            <span class="tag-pill">Handyman & Repairs</span>
-            <span class="tag-pill">Interior & Exterior Remodels</span>
-            <span class="tag-pill">Home Care Plans</span>
-            <span class="tag-pill">Landlords & Investors</span>
-          </div>
-          <div class="hero-actions">
-            <a href="tel:+15732388732" class="btn primary">
-              📞 Call Now
-              <span class="btn-sub">Get on the schedule</span>
-            </a>
-            <a href="contact.html" class="btn ghost">
-              ✉️ Request service
-              <span class="btn-sub">Use our online form</span>
-            </a>
-          </div>
-          <p class="hero-meta">
-            Based near Marble Hill • Serving most of Southeast Missouri and nearby Southern Illinois
-          </p>
-        </div>
+  <!-- ================= HERO ================= -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
 
-        <aside class="hero-card">
-          <p class="hero-card-title">Why people hire SEMO Total Home Solutions</p>
-          <h2>Real-world experience on real houses</h2>
-          <p class="hero-card-body">
-            We’ve rebuilt storm-damaged homes, turned around rentals between tenants, and handled everything from drywall
-            and paint to roofs, doors and drainage.
-          </p>
-          <div class="hero-pill-list">
-            <span class="hero-pill">Owner on every job</span>
-            <span class="hero-pill">Clear communication</span>
-            <span class="hero-pill">Honest timelines</span>
-          </div>
-          <p class="hero-note">
-            Call or text <strong>573-238-8732</strong> or use the request form and we’ll follow up as quickly as we can.
-          </p>
-        </aside>
+    <div class="hero-content">
+      <h1>Reliable Home Repair & Renovation in Southeast Missouri</h1>
+      <p>We treat your home like our own — quality, trust, and craftsmanship guaranteed.</p>
+
+      <div class="hero-buttons">
+        <a href="contact.html" class="btn btn-primary">Get Your Free Quote</a>
+        <a href="projects.html" class="btn btn-secondary">View Our Work</a>
       </div>
-    </section>
-
-    <!-- SERVICES OVERVIEW -->
-    <section class="section section-alt">
-      <div class="container">
-        <header class="section-header">
-          <h2>What we can help you with</h2>
-          <p class="section-subtitle">
-            One team for repairs, punch lists, updates and ongoing care. If it touches your home, there’s a good chance we can help.
-          </p>
-        </header>
-
-        <div class="cards-grid three-up">
-          <article class="card">
-            <span class="badge">Handyman & Repair</span>
-            <h3>Everyday fixes & small jobs</h3>
-            <p>
-              Doors, trim, drywall patches, leaks, flooring repairs, light fixtures, caulking, minor electrical and more.
-              Perfect for “honey-do” lists and inspection punch lists.
-            </p>
-          </article>
-          <article class="card">
-            <span class="badge">Remodels & Updates</span>
-            <h3>Rooms that actually work for you</h3>
-            <p>
-              Kitchens, baths, living rooms, bedrooms and basements. Demo, framing, drywall, paint, flooring and trim to
-              take a space from rough to finished.
-            </p>
-          </article>
-          <article class="card">
-            <span class="badge">Exterior & Protection</span>
-            <h3>Roofs, drainage & curb appeal</h3>
-            <p>
-              Roof repairs and replacements, storm damage clean-up, gutters and drainage installs, exterior paint and trim,
-              garage doors and more.
-            </p>
-          </article>
-        </div>
-
-        <div class="section-footer-cta">
-          <a href="services.html" class="btn ghost">See full list of services →</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- SERVICE AREA & ABOUT -->
-    <section class="section">
-      <div class="container two-col">
-        <div>
-          <header class="section-header align-left">
-            <h2>Where we work</h2>
-            <p class="section-subtitle">
-              Based in ZIP <strong>63764</strong> and serving a wide radius across Southeast Missouri and nearby Southern Illinois.
-            </p>
-          </header>
-          <ul class="list">
-            <li><span class="bullet">•</span> Cape Girardeau, Jackson & surrounding communities</li>
-            <li><span class="bullet">•</span> Dexter, Poplar Bluff, Sikeston and Western SEMO</li>
-            <li><span class="bullet">•</span> Perryville, Marble Hill & Bollinger County</li>
-            <li><span class="bullet">•</span> Southern Illinois border areas (Cairo and beyond)</li>
-            <li><span class="bullet">•</span> Generally up to ~100–125 miles from Marble Hill – just ask</li>
-          </ul>
-          <div class="pill-row">
-            <span class="pill">Residential homes</span>
-            <span class="pill">Rental properties</span>
-            <span class="pill">Small commercial</span>
-          </div>
-        </div>
-
-        <div>
-          <header class="section-header align-left">
-            <h2>About SEMO Total Home Solutions</h2>
-            <p class="section-subtitle">
-              Owner-operated, hands-on and used to doing what it takes to finish the job the right way.
-            </p>
-          </header>
-          <p class="body-copy">
-            We’re a small team that can build, fix or update almost anything on a house – from structure and drywall to paint,
-            flooring and roofs. You deal directly with the owner instead of getting passed around.
-          </p>
-          <p class="body-copy">
-            Clear communication, realistic expectations, and no disappearing acts – just solid work and honest follow-through.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- HOME CARE PLANS -->
-    <section class="section section-alt" id="plans">
-      <div class="container">
-        <header class="section-header">
-          <h2>SEMO Home Care Plans</h2>
-          <p class="section-subtitle">
-            Optional maintenance memberships that keep your home or rental in good shape without you having to babysit every detail.
-          </p>
-        </header>
-
-        <div class="two-col">
-          <article class="card">
-            <span class="badge badge-silver">Silver Plan</span>
-            <h3>Twice-yearly checkups</h3>
-            <p class="body-copy">
-              A simple plan for homeowners who want a pro to walk the property, catch little problems early and keep things
-              from snowballing.
-            </p>
-            <ul class="list">
-              <li><span class="bullet">•</span> 2 scheduled visits per year</li>
-              <li><span class="bullet">•</span> Seasonal inspection & minor touch-ups</li>
-              <li><span class="bullet">•</span> Priority scheduling for repairs</li>
-              <li><span class="bullet">•</span> Checklist and photos on request</li>
-            </ul>
-          </article>
-
-          <article class="card">
-            <span class="badge badge-gold">Gold Plan</span>
-            <h3>Quarterly property care</h3>
-            <p class="body-copy">
-              Ideal for rentals, busy homeowners and small portfolios that need consistent eyes-on and upkeep throughout the year.
-            </p>
-            <ul class="list">
-              <li><span class="bullet">•</span> 4 scheduled visits per year</li>
-              <li><span class="bullet">•</span> Seasonal maintenance & minor repairs</li>
-              <li><span class="bullet">•</span> Priority for urgent calls</li>
-              <li><span class="bullet">•</span> Preferred pricing on project work</li>
-              <li><span class="bullet">•</span> Option to add units or properties</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- FEATURED PROJECTS PREVIEW -->
-    <<div class="projects-grid">
-  <!-- Roof Rebuild Collage -->
-  <article class="project-card">
-    <span class="badge">Roof & exterior rebuild</span>
-    <h3>Storm-damaged home brought back to life</h3>
-    <p>
-      Tree damage, structural issues, and a failing roof cleaned up and rebuilt with a solid new roofing system
-      and exterior repairs.
-    </p>
-    <div class="before-after-grid single">
-      <figure>
-        <img src="assets/img/roof-replacement-collage.jpg"
-             alt="Collage of storm-damaged home and finished roof and exterior"
-             loading="lazy" />
-      </figure>
     </div>
-  </article>
+  </section>
 
-  <!-- Roll-up Door Collage -->
-  <article class="project-card">
-    <span class="badge">Roll-up door install</span>
-    <h3>Securing an open commercial bay</h3>
-    <p>
-      Framing repairs and a new roll-up door to secure a building that was wide open to the elements and walk-ins.
-    </p>
-    <div class="before-after-grid single">
-      <figure>
-        <img src="assets/img/rollup-door-collage.jpg"
-             alt="Collage of roll-up door framing and finished install"
-             loading="lazy" />
-      </figure>
-    </div>
-  </article>
+  <!-- ================= TRUST STRIP ================= -->
+  <section class="trust-strip">
+    <div class="trust-item">✔ Free Estimates</div>
+    <div class="trust-item">✔ Quality Craftsmanship</div>
+    <div class="trust-item">✔ Local & Reliable</div>
+    <div class="trust-item">✔ Fast Response</div>
+  </section>
 
-  <!-- Drainage Collage -->
-  <article class="project-card">
-    <span class="badge">Drainage install</span>
-    <h3>Keeping water away from the foundation</h3>
-    <p>
-      Trench drainage and piping added to collect and redirect water away from the house instead of letting it
-      sit against the foundation.
-    </p>
-    <div class="before-after-grid single">
-      <figure>
-        <img src="assets/img/drainage-install-collage.jpg"
-             alt="Collage of drainage installation work along the side of a home"
-             loading="lazy" />
-      </figure>
-    </div>
-  </article>
-
-  <!-- Exterior Paint Collage -->
-  <article class="project-card">
-    <span class="badge">Exterior paint & trim</span>
-    <h3>Curb-appeal refresh on a brick home</h3>
-    <p>
-      Exterior repaint and detail work that made a tired brick home look clean, bright and well cared-for again.
-    </p>
-    <div class="before-after-grid single">
-      <figure>
-        <img src="assets/img/house-painting-collage.jpg"
-             alt="Collage of exterior painting and trim work on a brick home"
-             loading="lazy" />
-      </figure>
-    </div>
-  </article>
-    </div>
-
-        <div class="section-footer-cta">
-          <a href="projects.html" class="btn ghost">See more details & photos →</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- CALL TO ACTION -->
-    <section class="section section-alt">
-      <div class="container contact-cta">
-        <div>
-          <h2>Ready to talk about your project?</h2>
-          <p>
-            Call or text <strong>573-238-8732</strong> or send us a request with a few details about the work you need done.
-          </p>
-        </div>
-        <div class="contact-cta-actions">
-          <a href="tel:+15732388732" class="btn primary">📞 Call 573-238-8732</a>
-          <a href="contact.html" class="btn ghost">✉️ Request service online</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <p class="footer-brand">SEMO Total Home Solutions</p>
-        <p class="footer-text">
-          Home repair, remodeling and maintenance throughout Southeast Missouri and nearby Southern Illinois.
+  <!-- ================= ABOUT PREVIEW ================= -->
+  <section class="about-preview">
+    <div class="about-container">
+      <div class="about-text">
+        <h2>About SEMO Total Home Solutions</h2>
+        <p>
+          SEMO Total Home Solutions is a locally owned home repair and renovation company
+          serving homeowners, landlords, and investors across Southeast Missouri.
         </p>
+        <ul>
+          <li>Experienced, skilled workmanship</li>
+          <li>Serving Southeast Missouri</li>
+          <li>Honest pricing & clear communication</li>
+        </ul>
+        <a href="about.html" class="btn btn-primary">Learn More</a>
       </div>
-      <div class="footer-links">
-        <span>📞 <a href="tel:+15732388732">573-238-8732</a></span>
-        <span>✉️ <a href="mailto:danny@semototalhomesolutions.com">danny@semototalhomesolutions.com</a></span>
-        <span>📍 Based near Marble Hill, MO</span>
+
+      <div class="about-image">
+        <img src="assets/img/projects/project-01.jpg" alt="Home renovation project in Southeast Missouri" loading="lazy">
       </div>
     </div>
-    <p class="footer-bottom">
-      © <span id="year"></span> SEMO Total Home Solutions. All rights reserved.
-    </p>
+  </section>
+
+  <!-- ================= CTA ================= -->
+  <section class="cta-banner">
+    <h2>Ready to upgrade your home? Let’s talk.</h2>
+    <a href="contact.html" class="btn btn-primary">Request Your Free Estimate</a>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div>
+        <h3>SEMO Total Home Solutions</h3>
+        <p>Reliable home repair & renovation across Southeast Missouri.</p>
+      </div>
+
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="testimonials.html">Testimonials</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Contact</h4>
+        <p>📍 Southeast Missouri</p>
+        <p>📞 Call for a Free Estimate</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© <span id="year"></span> SEMO Total Home Solutions. All rights reserved.</p>
+    </div>
   </footer>
 
-  <script>
-    // Mobile nav toggle
-    const navToggle = document.getElementById('navToggle');
-    const navLinks = document.getElementById('navLinks');
-    if (navToggle && navLinks) {
-      navToggle.addEventListener('click', () => {
-        navLinks.classList.toggle('open');
-      });
-    }
-    // Footer year
-    const yearSpan = document.getElementById('year');
-    if (yearSpan) {
-      yearSpan.textContent = new Date().getFullYear();
-    }
-  </script>
 </body>
-  </html>
+</html>
