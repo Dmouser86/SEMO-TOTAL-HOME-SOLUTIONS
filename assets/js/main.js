@@ -1,19 +1,39 @@
-// SEMO Total Home Solutions - basic JS
+/* =========================
+   SEMO Total Home Solutions
+   Main JS (fast + minimal)
+   ========================= */
 
-document.addEventListener("DOMContentLoaded", function () {
-  // Mobile nav toggle
-  var navToggle = document.getElementById("navToggle");
-  var navMenu = document.getElementById("navMenu");
+(function () {
+  // --- Mobile nav toggle
+  const hamburger = document.getElementById("hamburger");
+  const navMenu = document.getElementById("navMenu");
 
-  if (navToggle && navMenu) {
-    navToggle.addEventListener("click", function () {
-      navMenu.classList.toggle("open");
+  if (hamburger && navMenu) {
+    hamburger.addEventListener("click", () => {
+      navMenu.classList.toggle("is-open");
+      hamburger.classList.toggle("is-open");
+    });
+
+    // Close menu when clicking a link (mobile)
+    navMenu.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        navMenu.classList.remove("is-open");
+        hamburger.classList.remove("is-open");
+      });
+    });
+
+    // Close menu if user taps outside menu (mobile polish)
+    document.addEventListener("click", (e) => {
+      const clickedInside =
+        navMenu.contains(e.target) || hamburger.contains(e.target);
+      if (!clickedInside) {
+        navMenu.classList.remove("is-open");
+        hamburger.classList.remove("is-open");
+      }
     });
   }
 
-  // Footer year
-  var yearEl = document.getElementById("year");
-  if (yearEl) {
-    yearEl.textContent = new Date().getFullYear();
-  }
-});
+  // --- Footer year
+  const year = document.getElementById("year");
+  if (year) year.textContent = new Date().getFullYear();
+})();
