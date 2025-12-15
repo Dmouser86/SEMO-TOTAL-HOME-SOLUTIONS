@@ -519,7 +519,7 @@ a:hover { opacity: 0.95; }
 }
 
 .hero-buttons {
-  display: flex;
+  display: flex;   
   gap: 1rem;
   flex-wrap: wrap;
   justify-content: center;
@@ -531,7 +531,7 @@ a:hover { opacity: 0.95; }
 }
 
 /* Limit logo size */
-.logo img {
+...logo img {
   max-width: 200px;
   height: auto;
 }
