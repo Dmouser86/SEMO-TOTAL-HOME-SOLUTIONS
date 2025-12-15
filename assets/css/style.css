@@ -476,7 +476,7 @@ a:hover { opacity: 0.95; }
 
 /* Upgraded Hero Section Styles */
 .hero-upgraded {
-  background-image: url('assets/img/hero/hero-mounds-city-job-01.webp');
+  background-image: url('../img/hero/hero-mounds-city-job-01.webp');
   background-size: cover;
   background-position: center;
   position: relative;
@@ -501,6 +501,12 @@ a:hover { opacity: 0.95; }
   max-width: 720px;
   padding: 0 20px;
 }
+
+
+
+
+
+
 
 .hero-upgraded h1 {
   font-size: 2.5rem;
