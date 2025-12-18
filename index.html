@@ -1,135 +1,250 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
-  <!-- BASIC META -->
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SEMO Total Home Solutions | Home Repair & Renovation in Southeast Missouri</title>
-  <meta name="description" content="SEMO Total Home Solutions provides reliable home repair, remodeling, and renovation services across Southeast Missouri. Free estimates. Quality craftsmanship." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SEMO Total Home Solutions | Professional Home Solutions in Southeast Missouri</title>
+  <meta name="description" content="SEMO Total Home Solutions provides professional residential and light commercial construction, remodeling, roofing, and home repairs within 125 miles of Marble Hill, MO." />  <meta property="og:title" content="SEMO Total Home Solutions" />
+  <meta property="og:description" content="Professional Home Solutions. Built Right. Priced Fair." />
+  <meta property="og:type" content="website" />  <link rel="icon" href="assets/favicon/favicon.ico" />  <style>
+    :root {
+      --brand-orange: #f07c18;
+      --brand-dark: #0b0b0b;
+      --brand-dark-2: #151515;
+      --brand-gray: #bdbdbd;
+      --brand-white: #ffffff;
+    }
 
-  <!-- SEO / SOCIAL -->
-  <link rel="canonical" href="https://www.semototalhomesolutions.com/" />
-  <meta property="og:title" content="SEMO Total Home Solutions" />
-  <meta property="og:description" content="Reliable home repair & renovation in Southeast Missouri. Quality work. Free estimates." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.semototalhomesolutions.com/" />
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-  <!-- STYLES -->
-  <link rel="stylesheet" href="assets/css/style.css" />
+    body {
+      background: var(--brand-dark);
+      color: var(--brand-white);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen;
+      line-height: 1.6;
+    }
 
-  <!-- GOOGLE FONTS -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    a { color: inherit; text-decoration: none; }
 
-  <!-- JS -->
-  <script defer src="assets/js/main.js"></script>
-</head>
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(0,0,0,0.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid #222;
+    }
 
-<body>
+    .nav {
+      max-width: 1200px;
+      margin: auto;
+      padding: 1rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
 
-  <!-- ================= HEADER / NAV ================= -->
-  <header class="site-header">
-    <div class="nav-container">
-      <a href="index.html" class="logo">
-        <img src="assets/img/logo-horizontal.png" alt="SEMO Total Home Solutions Logo">
-      </a>
+    .nav img {
+      height: 48px;
+    }
 
-      <nav class="nav-menu" id="navMenu">
-        <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="projects.html">Projects</a>
-        <a href="testimonials.html">Testimonials</a>
-        <a href="contact.html" class="nav-cta">Get a Quote</a>
-      </nav>
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      font-weight: 600;
+    }
 
-      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+    .nav-links a:hover { color: var(--brand-orange); }
+
+    .cta {
+      background: var(--brand-orange);
+      color: #000;
+      padding: 0.75rem 1.25rem;
+      border-radius: 6px;
+      font-weight: 800;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .cta:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 8px 20px rgba(240,124,24,0.35);
+    }
+
+    .hero {
+      min-height: 92vh;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 3rem 1.5rem;
+      background:
+        linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+        url('assets/images/hero.webp') center / cover no-repeat;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.6rem, 5vw, 4.2rem);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .hero p {
+      max-width: 760px;
+      margin: 1.2rem auto 2.5rem;
+      font-size: 1.15rem;
+      color: var(--brand-gray);
+    }
+
+    section { padding: 4.5rem 1.5rem; }
+
+    .container { max-width: 1200px; margin: auto; }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .section-title h2 {
+      font-size: 2.4rem;
+      text-transform: uppercase;
+    }
+
+    .section-title span { color: var(--brand-orange); }
+
+    .grid {
+      display: grid;
+      gap: 2.2rem;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+
+    .card {
+      background: var(--brand-dark-2);
+      padding: 2.2rem;
+      border-radius: 14px;
+      border: 1px solid #232323;
+      transition: transform 0.25s ease, border-color 0.25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: var(--brand-orange);
+    }
+
+    .card h3 {
+      margin-bottom: 0.6rem;
+      color: var(--brand-orange);
+    }
+
+    .card p { color: var(--brand-gray); }
+
+    .why {
+      background: radial-gradient(circle at top, #1a1a1a, #000);
+    }
+
+    footer {
+      background: #000;
+      padding: 3.5rem 1.5rem;
+      border-top: 1px solid #222;
+    }
+
+    footer img { height: 60px; margin-bottom: 1rem; }
+
+    footer p { color: var(--brand-gray); font-size: 0.95rem; }
+
+    .footer-grid {
+      display: grid;
+      gap: 2.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+
+    .sticky-call, .sticky-text {
+      position: fixed;
+      bottom: 20px;
+      background: var(--brand-orange);
+      color: #000;
+      padding: 0.9rem 1.3rem;
+      border-radius: 50px;
+      font-weight: 900;
+      z-index: 999;
+    }
+
+    .sticky-call { right: 20px; }
+    .sticky-text { right: 140px; }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .sticky-text { display: none; }
+    }
+  </style></head>
+<body><header>
+  <nav class="nav">
+    <img src="assets/logo.png" alt="SEMO Total Home Solutions Logo" />
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="/services/">Services</a>
+      <a href="/about.html">About</a>
+      <a href="/gallery.html">Gallery</a>
+      <a href="/contact.html">Contact</a>
     </div>
-  </header>
-
-  <!-- ================= HERO ================= -->
-  <!-- ================= TRUST STRIP ================= -->
-  
-  <section class="hero hero-upgraded">
-  <div class="hero-overlay"></div>
-  <div class="hero-content">
-    <h1>Reliable Home Repair &amp; Renovation</h1>
-    <p>Bringing expert craftsmanship to homes across Southeast Missouri.</p>
-    <div class="hero-buttons">
-      <a href="contact.html" class="btn btn-primary">Request Your Free Quote</a>
-      <a href="projects.html" class="btn btn-secondary">See Our Work</a>
+    <a href="/contact.html" class="cta">Free Estimate</a>
+  </nav>
+</header><section class="hero">
+  <div>
+    <h1>Professional Home Solutions<br/>Built Right. Priced Fair.</h1>
+    <p>
+      SEMO Total Home Solutions provides residential and light commercial construction,
+      remodeling, roofing, and home repairs throughout Southeast Missouri and Southern Illinois.
+    </p>
+    <a href="/contact.html" class="cta">Request a Free Estimate</a>
+  </div>
+</section><section>
+  <div class="container">
+    <div class="section-title">
+      <h2><span>Our</span> Services</h2>
+    </div>
+    <div class="grid">
+      <div class="card"><h3>Roofing</h3><p>Repairs, replacements, inspections, and storm damage solutions.</p></div>
+      <div class="card"><h3>Remodeling</h3><p>Kitchens, bathrooms, basements, and full renovations.</p></div>
+      <div class="card"><h3>Home Repairs</h3><p>General repairs handled quickly and professionally.</p></div>
+      <div class="card"><h3>General Contracting</h3><p>From additions to full new builds, start to finish.</p></div>
     </div>
   </div>
-</section>
-<section class="trust-strip">
-    <div class="trust-item">✔ Free Estimates</div>
-    <div class="trust-item">✔ Quality Craftsmanship</div>
-    <div class="trust-item">✔ Local & Reliable</div>
-    <div class="trust-item">✔ Fast Response</div>
-  </section>
-
-  <!-- ================= ABOUT PREVIEW ================= -->
-  <section class="about-preview">
-    <div class="about-container">
-      <div class="about-text">
-        <h2>About SEMO Total Home Solutions</h2>
-        <p>
-          SEMO Total Home Solutions is a locally owned home repair and renovation company
-          serving homeowners, landlords, and investors across Southeast Missouri.
-        </p>
-        <ul>
-          <li>Experienced, skilled workmanship</li>
-          <li>Serving Southeast Missouri</li>
-          <li>Honest pricing & clear communication</li>
-        </ul>
-        <a href="about.html" class="btn btn-primary">Learn More</a>
-      </div>
-
-      <div class="about-image">
-        <img src="assets/img/projects/project-01.jpg" alt="Home renovation project in Southeast Missouri" loading="lazy">
-      </div>
+</section><section class="why">
+  <div class="container">
+    <div class="section-title">
+      <h2>Why <span>Choose</span> Us</h2>
     </div>
-  </section>
-
-  <!-- ================= CTA ================= -->
-  <section class="cta-banner">
-    <h2>Ready to upgrade your home? Let’s talk.</h2>
-    <a href="contact.html" class="btn btn-primary">Request Your Free Estimate</a>
-  </section>
-
-  <!-- ================= FOOTER ================= -->
-  <footer class="site-footer">
-    <div class="footer-container">
-      <div>
-        <h3>SEMO Total Home Solutions</h3>
-        <p>Reliable home repair & renovation across Southeast Missouri.</p>
-      </div>
-
-      <div>
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="testimonials.html">Testimonials</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-
-      <div>
-        <h4>Contact</h4>
-        <p>📍 Southeast Missouri</p>
-        <p>📞 Call for a Free Estimate</p>
-      </div>
+    <div class="grid">
+      <div class="card"><h3>Experienced & Reliable</h3><p>New company backed by real hands-on experience.</p></div>
+      <div class="card"><h3>Fair Pricing</h3><p>Professional workmanship without inflated contractor pricing.</p></div>
+      <div class="card"><h3>Quality Guaranteed</h3><p>Industry-standard workmanship warranty on all projects.</p></div>
     </div>
-
-    <div class="footer-bottom">
-      <p>© <span id="year"></span> SEMO Total Home Solutions. All rights reserved.</p>
+  </div>
+</section><footer>
+  <div class="container footer-grid">
+    <div>
+      <img src="assets/logo.png" alt="SEMO Logo" />
+      <p>
+        SEMO Total Home Solutions<br/>
+        Serving Southeast Missouri & Southern Illinois<br/>
+        Residential & Light Commercial
+      </p>
     </div>
-  </footer>
+    <div>
+      <p><strong>Contact</strong><br/>
+        Phone: 573-238-8732<br/>
+        Email: danny@semototalhomesolutions.com
+      </p>
+    </div>
+    <div>
+      <p><strong>Service Area</strong><br/>
+        Within 125 miles of Marble Hill, MO 63764
+      </p>
+    </div>
+  </div>
+</footer><a href="tel:15732388732" class="sticky-call">Call</a> <a href="sms:15732388732" class="sticky-text">Text</a>
 
 </body>
 </html>
